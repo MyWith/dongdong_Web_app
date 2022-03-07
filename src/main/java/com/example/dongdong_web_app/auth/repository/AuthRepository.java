@@ -4,7 +4,9 @@ import com.example.dongdong_web_app.auth.entity.AuthEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface AuthRepository extends JpaRepository<AuthEntity, String> {
-
+    List<AuthEntity> findByEmail(String email);
 }
