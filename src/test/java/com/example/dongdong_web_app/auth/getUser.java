@@ -3,6 +3,7 @@ package com.example.dongdong_web_app.auth;
 import com.example.dongdong_web_app.auth.dto.SignInDto;
 import com.example.dongdong_web_app.auth.entity.AuthEntity;
 import com.example.dongdong_web_app.auth.repository.AuthRepository;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,6 +18,7 @@ public class getUser {
 
     @Test
     public void 로그인테스트(){
-        List<AuthEntity> auth = authRepository.findByEmail("vpdls1511@gmail.com");
+        AuthEntity auth = authRepository.findByUserEmail("vpdls1511@gmail.com");
+        Assertions.assertEquals(auth.getUserPassword(), "Test1234!!");
     }
 }
