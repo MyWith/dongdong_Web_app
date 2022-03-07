@@ -2,8 +2,7 @@ package com.example.dongdong_web_app.auth.dto;
 
 import lombok.*;
 
-public class SignInDto {
-
+public class SignUpDto {
     @Getter
     @Setter
     @AllArgsConstructor
@@ -26,17 +25,9 @@ public class SignInDto {
     @Getter
     @Setter
     public static class Request{
+        private SignUpDto.Info info;
+        private SignUpDto.Animal animal;
         private String userEmail;
         private String userPassword;
     }
-
-    @Getter
-    @Setter
-    @Builder
-    public static class Response{
-        private Info info;
-        private Animal animal;
-        private String userEmail;
-    }
-
 }

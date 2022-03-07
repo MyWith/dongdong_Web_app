@@ -12,10 +12,14 @@ import javax.persistence.*;;
 public class AuthEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long userUid;
 
     private String userEmail;
     private String userPassword;
+    private String userNickName;
+    private int userAge;
+    private String animalName;
+    private String animalKind;
 
 }
