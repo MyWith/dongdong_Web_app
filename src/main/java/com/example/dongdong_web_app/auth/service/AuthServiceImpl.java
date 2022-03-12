@@ -4,13 +4,24 @@ import com.example.dongdong_web_app.auth.dto.SignInDto;
 import com.example.dongdong_web_app.auth.dto.SignUpDto;
 import com.example.dongdong_web_app.auth.entity.AuthEntity;
 import com.example.dongdong_web_app.auth.repository.AuthRepository;
+import io.jsonwebtoken.Jwt;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import javax.crypto.spec.SecretKeySpec;
+import javax.xml.bind.DatatypeConverter;
+import java.security.Key;
+import java.security.Signature;
+import java.util.Date;
+
 @Service
 public class AuthServiceImpl implements AuthService {
+
+    private static final String SECRET_KEY = "1io2jipowejfisjkofj0198q3ju4i1jkl3j4pr13jifsadlkjfapsc89vqu34";
 
     @Autowired
     private AuthRepository authRepository;
@@ -59,5 +70,20 @@ public class AuthServiceImpl implements AuthService {
         }catch (Exception e){
             return new ResponseEntity(null,null,400);
         }
+    }
+
+    @Override
+    public String createToken(String subject, long expTime){
+        if(expTime <= 0) throw new RuntimeException("exp time is not over 0");
+
+        SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
+        byte[] secretKeyBytes = DatatypeConverter.parseBase64Binary(SECRET_KEY);
+        Key signingKey = new SecretKeySpec(secretKeyBytes, signatureAlgorithm.getJcaName());
+
+        return Jwts.builder()
+                .setSubject(subject)
+                .signWith(signingKey, signatureAlgorithm)
+                .setExpiration(new Date(System.currentTimeMillis() + expTime))
+                .compact();
     }
 }

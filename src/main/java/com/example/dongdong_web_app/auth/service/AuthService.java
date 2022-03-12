@@ -8,4 +8,5 @@ import org.springframework.stereotype.Service;
 public interface AuthService {
     public SignInDto.Response getUserData(String user_email, String user_password);
     public ResponseEntity saveUserData(SignUpDto.Request request);
+    public String createToken(String subject, long expTime);
 }
