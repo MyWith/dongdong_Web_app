@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Map;
+
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
@@ -22,6 +24,11 @@ public class AuthController {
     public ResponseEntity signIn(@RequestBody SignInDto.Request signin) {
         SignInDto.Response response = authService.getUserData(signin.getUserEmail(), signin.getUserPassword());
         return new ResponseEntity(response, null, 200);
+    }
+
+    @PostMapping("/auto")
+    public boolean validToken(@RequestBody String token, @RequestBody String userEmail){
+        return authService.getSubject(token, userEmail);
     }
 
     @PostMapping("/signup")
