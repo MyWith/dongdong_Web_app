@@ -44,10 +44,12 @@ public class AuthServiceImpl implements AuthService {
             AuthEntity UserData = authRepository.findByUserEmail(user_email);
             SignInDto.Info info = new SignInDto.Info(UserData.getUserUid(), UserData.getUserNickName(), UserData.getUserAge());
             SignInDto.Animal animal = new SignInDto.Animal(UserData.getAnimalName(), UserData.getAnimalKind());
+            SignInDto.Token tokens = new SignInDto.Token(token);
 
             SignInDto.Response response = SignInDto.Response.builder()
                     .userEmail(UserData.getUserEmail())
                     .info(info)
+                    .token(tokens)
                     .animal(animal)
                     .build();
 
