@@ -5,7 +5,6 @@ import com.example.dongdong_web_app.auth.dto.SignUpDto;
 import com.example.dongdong_web_app.auth.entity.AuthEntity;
 import com.example.dongdong_web_app.auth.repository.AuthRepository;
 import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jwt;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,24 +31,25 @@ public class AuthServiceImpl implements AuthService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    @Autowired
+    private Jwt jwt;
+
     @Override
     public SignInDto.Response getUserData(String user_email, String user_password) {
         String getPassword = authRepository.findByUserEmail(user_email).getUserPassword();
 
-        String token = this.createToken(user_email, (2*1000*60));
-        Map<String, Object> map = new LinkedHashMap<>() ;
-        map.put("result", token);
 
         if(passwordEncoder.matches(user_password, getPassword)){
             AuthEntity UserData = authRepository.findByUserEmail(user_email);
             SignInDto.Info info = new SignInDto.Info(UserData.getUserUid(), UserData.getUserNickName(), UserData.getUserAge());
             SignInDto.Animal animal = new SignInDto.Animal(UserData.getAnimalName(), UserData.getAnimalKind());
-            SignInDto.Token tokens = new SignInDto.Token(token);
+
+            SignInDto.Token token = jwt.createToken( UserData.getUserUid(), info );
 
             SignInDto.Response response = SignInDto.Response.builder()
                     .userEmail(UserData.getUserEmail())
                     .info(info)
-                    .token(tokens)
+                    .token(token)
                     .animal(animal)
                     .build();
 
@@ -80,32 +80,5 @@ public class AuthServiceImpl implements AuthService {
         }catch (Exception e){
             return new ResponseEntity(null,null,400);
         }
-    }
-
-    @Override
-    public String createToken(String subject, long expTime){
-        if(expTime <= 0) throw new RuntimeException("exp time is not over 0");
-
-        SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
-        byte[] secretKeyBytes = DatatypeConverter.parseBase64Binary(SECRET_KEY);
-        Key signingKey = new SecretKeySpec(secretKeyBytes, signatureAlgorithm.getJcaName());
-
-        return Jwts.builder()
-                .setSubject(subject)
-                .signWith(signingKey, signatureAlgorithm)
-                .setExpiration(new Date(System.currentTimeMillis() + expTime))
-                .compact();
-    }
-
-
-    //valid Token Method
-    @Override
-    public boolean getSubject(String token, String user_email){
-        Claims claims = Jwts.parserBuilder()
-                .setSigningKey(DatatypeConverter.parseBase64Binary(SECRET_KEY))
-                .build()
-                .parseClaimsJws(token)
-                .getBody();
-        return (claims.getSubject() == user_email);
     }
 }

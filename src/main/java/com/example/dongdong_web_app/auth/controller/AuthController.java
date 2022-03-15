@@ -26,11 +26,6 @@ public class AuthController {
         return new ResponseEntity(response, null, 200);
     }
 
-    @PostMapping("/auto")
-    public boolean validToken(@RequestBody String token, @RequestBody String userEmail){
-        return authService.getSubject(token, userEmail);
-    }
-
     @PostMapping("/signup")
     public ResponseEntity signUp(@RequestBody SignUpDto.Request signup){
         return authService.saveUserData(signup);

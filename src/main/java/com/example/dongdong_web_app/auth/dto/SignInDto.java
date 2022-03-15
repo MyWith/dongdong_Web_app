@@ -20,6 +20,7 @@ public class SignInDto {
     @NoArgsConstructor
     public static class Token{
         private String accessToken;
+        private String refreshToken;
     }
 
     @Getter
