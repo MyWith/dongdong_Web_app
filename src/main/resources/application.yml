@@ -11,3 +11,8 @@ spring:
 jwt:
   secret: "testJwtKeyDongDongWASZXCZXFLJSDNFQWJDFJSJKFJSDLVMAKCSLAPKSKDJETQOPWEJRTQKWLEFNMLSDPVAKSJDCOKVTestJWT"
   role: "roles"
+logging:
+  file:
+    name: ${user.dir}/log/test.log  # 로깅 파일 위치이다.
+    max-history: 7 # 로그 파일 삭제 주기이다. 7일 이후 로그는 삭제한다.
+    max-size: 10MB  # 로그 파일 하나당 최대 파일 사이즈이다.

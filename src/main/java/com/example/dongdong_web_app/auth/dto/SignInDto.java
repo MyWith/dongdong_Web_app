@@ -18,15 +18,6 @@ public class SignInDto {
     @Setter
     @AllArgsConstructor
     @NoArgsConstructor
-    public static class Token{
-        private String accessToken;
-        private String refreshToken;
-    }
-
-    @Getter
-    @Setter
-    @AllArgsConstructor
-    @NoArgsConstructor
     public static class Animal{
         private String animalName;
         private String animalKind;
@@ -45,7 +36,7 @@ public class SignInDto {
     public static class Response{
         private Info info;
         private Animal animal;
-        private Token token;
+        private TokenDto token;
         private String userEmail;
     }
 

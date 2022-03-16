@@ -2,6 +2,7 @@ package com.example.dongdong_web_app.auth.service;
 
 import com.example.dongdong_web_app.auth.dto.SignInDto;
 import com.example.dongdong_web_app.auth.dto.SignUpDto;
+import com.example.dongdong_web_app.auth.dto.TokenDto;
 import com.example.dongdong_web_app.auth.entity.AuthEntity;
 import com.example.dongdong_web_app.auth.repository.AuthRepository;
 import com.example.dongdong_web_app.auth.service.JwtProvider;
@@ -33,7 +34,7 @@ public class AuthServiceImpl implements AuthService {
             SignInDto.Info info = new SignInDto.Info(UserData.getUserUid(), UserData.getUserNickName(), UserData.getUserAge());
             SignInDto.Animal animal = new SignInDto.Animal(UserData.getAnimalName(), UserData.getAnimalKind());
 
-            SignInDto.Token token = jwt.createToken( UserData.getUserUid(), info );
+            TokenDto token = jwt.createToken( UserData.getUserUid(), info );
 
             SignInDto.Response response = SignInDto.Response.builder()
                     .userEmail(UserData.getUserEmail())
