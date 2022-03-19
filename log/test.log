@@ -390,3 +390,82 @@ Using generated security password: 0b4d4114-7f7e-41a6-a2a1-9f2a59a5f116
 2022-03-16 15:14:27.636  INFO 39567 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-03-16 15:14:27.644  INFO 39567 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2022-03-16 15:14:27.690  INFO 39567 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-03-16 18:40:04.316  WARN 42046 --- [Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/ngyu/.gradle/caches/modules-2/files-2.1/org.json/json/20090211/c183aa3a2a6250293808bba12262c8920ce5a51c/json-20090211.jar!/org/json/JSONObject.class
+	jar:file:/Users/ngyu/.gradle/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2022-03-16 18:40:04.347  INFO 42046 --- [Test worker] c.e.dongdong_web_app.auth.TokenTest      : Starting TokenTest using Java 11.0.11 on gimnamgyuui-MacBookAir.local with PID 42046 (started by ngyu in /Users/ngyu/Documents/Develop/Java/study/dongdong_Web_App)
+2022-03-16 18:40:04.348  INFO 42046 --- [Test worker] c.e.dongdong_web_app.auth.TokenTest      : No active profile set, falling back to 1 default profile: "default"
+2022-03-16 18:40:05.715  INFO 42046 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-16 18:40:05.720  INFO 42046 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-03-16 18:40:05.794  INFO 42046 --- [Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dongdong_web_app.auth.repository.AuthRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-16 18:40:05.795  INFO 42046 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 0 JDBC repository interfaces.
+2022-03-16 18:40:05.813  INFO 42046 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-16 18:40:05.814  INFO 42046 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-16 18:40:05.870  INFO 42046 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 1 JPA repository interfaces.
+2022-03-16 18:40:06.447  INFO 42046 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$e5b07ab4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-03-16 18:40:06.557  INFO 42046 --- [Test worker] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-03-16 18:40:07.223  INFO 42046 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-16 18:40:07.275  INFO 42046 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-16 18:40:07.466  INFO 42046 --- [Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-16 18:40:07.579  INFO 42046 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-16 18:40:07.988  INFO 42046 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-16 18:40:08.024  INFO 42046 --- [Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2022-03-16 18:40:08.960  INFO 42046 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-16 18:40:08.979  INFO 42046 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-16 18:40:09.702  WARN 42046 --- [Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-16 18:40:09.965  INFO 42046 --- [Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 6193b7cb-c1a6-4ab7-a3e3-d8db960f5211
+
+2022-03-16 18:40:10.217  INFO 42046 --- [Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-03-16 18:40:11.235  WARN 42046 --- [Test worker] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-03-16 18:40:11.710  INFO 42046 --- [Test worker] c.e.dongdong_web_app.auth.TokenTest      : Started TokenTest in 8.043 seconds (JVM running for 10.761)
+2022-03-16 18:40:12.167  INFO 42046 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-16 18:40:12.177  INFO 42046 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-16 18:40:12.202  INFO 42046 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-03-16 18:41:07.104  WARN 42078 --- [Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/ngyu/.gradle/caches/modules-2/files-2.1/org.json/json/20090211/c183aa3a2a6250293808bba12262c8920ce5a51c/json-20090211.jar!/org/json/JSONObject.class
+	jar:file:/Users/ngyu/.gradle/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2022-03-16 18:41:07.129  INFO 42078 --- [Test worker] c.e.dongdong_web_app.auth.TokenTest      : Starting TokenTest using Java 11.0.11 on gimnamgyuui-MacBookAir.local with PID 42078 (started by ngyu in /Users/ngyu/Documents/Develop/Java/study/dongdong_Web_App)
+2022-03-16 18:41:07.132  INFO 42078 --- [Test worker] c.e.dongdong_web_app.auth.TokenTest      : No active profile set, falling back to 1 default profile: "default"
+2022-03-16 18:41:08.464  INFO 42078 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-16 18:41:08.468  INFO 42078 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-03-16 18:41:08.529  INFO 42078 --- [Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dongdong_web_app.auth.repository.AuthRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-16 18:41:08.530  INFO 42078 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 0 JDBC repository interfaces.
+2022-03-16 18:41:08.547  INFO 42078 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-16 18:41:08.548  INFO 42078 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-16 18:41:08.610  INFO 42078 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 1 JPA repository interfaces.
+2022-03-16 18:41:09.174  INFO 42078 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$aa85ca62] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-03-16 18:41:09.275  INFO 42078 --- [Test worker] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-03-16 18:41:09.960  INFO 42078 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-16 18:41:10.011  INFO 42078 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-16 18:41:10.204  INFO 42078 --- [Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-16 18:41:10.321  INFO 42078 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-16 18:41:10.667  INFO 42078 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-16 18:41:10.704  INFO 42078 --- [Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2022-03-16 18:41:11.627  INFO 42078 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-16 18:41:11.640  INFO 42078 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-16 18:41:12.356  WARN 42078 --- [Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-16 18:41:12.584  INFO 42078 --- [Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: e364bf54-7cbb-4b51-abf2-f164904ed1ae
+
+2022-03-16 18:41:12.742  INFO 42078 --- [Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-03-16 18:41:13.833  WARN 42078 --- [Test worker] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-03-16 18:41:14.441  INFO 42078 --- [Test worker] c.e.dongdong_web_app.auth.TokenTest      : Started TokenTest in 7.929 seconds (JVM running for 9.826)
+2022-03-16 18:42:33.438  WARN 42078 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s851ms).
+2022-03-16 18:42:40.708  INFO 42078 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-16 18:42:40.733  INFO 42078 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-16 18:42:40.783  INFO 42078 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
