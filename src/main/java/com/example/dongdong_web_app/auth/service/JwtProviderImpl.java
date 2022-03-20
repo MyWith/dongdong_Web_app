@@ -3,7 +3,6 @@ package com.example.dongdong_web_app.auth.service;
 import com.example.dongdong_web_app.auth.dto.SignInDto;
 import com.example.dongdong_web_app.auth.dto.TokenDto;
 import com.example.dongdong_web_app.auth.entity.AuthEntity;
-import com.example.dongdong_web_app.auth.exception.ExpiredJwtTokenException;
 import com.example.dongdong_web_app.auth.repository.AuthRepository;
 import io.jsonwebtoken.*;
 import lombok.extern.slf4j.Slf4j;
@@ -76,12 +75,12 @@ public class JwtProviderImpl implements JwtProvider {
     }
 
     @Override
-    public boolean validationToken(String token) throws ExpiredJwtTokenException {
+    public boolean validationToken(String token) throws Exception {
         try {
             Jwts.parser().setSigningKey(secret).parseClaimsJws(token);
             return true;
         }catch (JwtException | IllegalArgumentException e){
-            throw new ExpiredJwtTokenException();
+            throw new Exception("Token exp time out");
         }
     }
 

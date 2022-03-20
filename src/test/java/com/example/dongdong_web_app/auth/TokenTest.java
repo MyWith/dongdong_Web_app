@@ -1,8 +1,6 @@
 package com.example.dongdong_web_app.auth;
 
-import com.example.dongdong_web_app.auth.exception.ExpiredJwtTokenException;
 import com.example.dongdong_web_app.auth.service.JwtProvider;
-import com.example.dongdong_web_app.auth.service.JwtService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,7 +17,7 @@ public class TokenTest {
 
 
     @Test
-    public void 토큰테스트_1() throws ExpiredJwtTokenException {
+    public void 토큰테스트_1() throws Exception {
         jwtProvider.validationToken(expiredToken);
     }
 }
