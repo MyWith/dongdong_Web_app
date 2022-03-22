@@ -6,6 +6,7 @@ import com.example.dongdong_web_app.auth.entity.AuthEntity;
 import com.example.dongdong_web_app.auth.repository.AuthRepository;
 import io.jsonwebtoken.*;
 import lombok.extern.slf4j.Slf4j;
+import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -16,8 +17,7 @@ import java.util.Date;
 @Slf4j
 public class JwtProviderImpl implements JwtProvider {
 
-    @Autowired
-    AuthRepository authRepository;
+    @Autowired AuthRepository authRepository;
 
     @Value("${jwt.secret}")
     private String secret;
@@ -75,12 +75,12 @@ public class JwtProviderImpl implements JwtProvider {
     }
 
     @Override
-    public boolean validationToken(String token) throws Exception {
+    public boolean validationToken(String token) throws JSONException {
         try {
             Jwts.parser().setSigningKey(secret).parseClaimsJws(token);
             return true;
-        }catch (JwtException | IllegalArgumentException e){
-            throw new Exception("Token exp time out");
+        }catch (Exception e){
+            throw new JSONException("Expired Token");
         }
     }
 
