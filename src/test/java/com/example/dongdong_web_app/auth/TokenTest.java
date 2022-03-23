@@ -19,8 +19,7 @@ public class TokenTest {
 
     @Test
     public void 토큰테스트_1() throws Exception {
-        mockMvc.perform(
-                get("/api/auth/exceptionTest").param("token",token))
+        mockMvc.perform(get("/api/auth/exceptionTest").param("token",token))
                 .andDo(print());
     }
 }

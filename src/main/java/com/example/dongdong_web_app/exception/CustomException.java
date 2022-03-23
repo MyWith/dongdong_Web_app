@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
-public class CustomException extends RuntimeException {
+public class CustomException{
 
     @ExceptionHandler(value = JSONException.class)
     public ResponseEntity<String> jsonExceptionHandle(Exception e) {

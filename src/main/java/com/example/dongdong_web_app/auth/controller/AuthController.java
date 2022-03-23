@@ -6,13 +6,12 @@ import com.example.dongdong_web_app.auth.dto.TokenDto;
 import com.example.dongdong_web_app.auth.service.AuthService;
 import com.example.dongdong_web_app.auth.service.JwtProvider;
 import lombok.extern.slf4j.Slf4j;
+import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Map;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -48,8 +47,8 @@ public class AuthController {
     }
 
     @GetMapping("/exceptionTest")
-    public String exception(@Param("token") String token) throws Exception {
+    public String exception(@Param("token") String token) throws JSONException {
         jwtProvider.validationToken(token);
-        return " TEST ";
+        return "TEST";
     }
 }
