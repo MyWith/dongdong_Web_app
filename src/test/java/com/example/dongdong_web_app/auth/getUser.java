@@ -35,7 +35,7 @@ public class getUser {
 
     @Test
     public void 로그인_테스트_1(){
-        String encodePassword = authRepository.findByUserEmail("vpdls1512@gmail.com").getUserPassword();
+        String encodePassword = authRepository.findByUserEmail("vpdls1511@gmail.com").getUserPassword();
         String plainPassword = "Test1234!!";
         assertAll(
                 () -> assertNotEquals(plainPassword, encodePassword),
@@ -46,22 +46,10 @@ public class getUser {
     @Test
     public void 로그인_테스트_2() throws Exception {
         JSONObject request = new JSONObject();
-        request.put("userEmail", "vpdls1512@gmail.com");
+        request.put("userEmail", "vpdls1511@gmail.com");
         request.put("userPassword", "Test1234!!");
         mockMvc.perform(
                         post("/api/auth/")
-                                .contentType(MediaType.APPLICATION_JSON)
-                                .content(request.toString()))
-                .andExpect(status().isOk())
-                .andDo(print());
-    }
-
-    @Test
-    public void 로그인_테스트_3() throws Exception {
-        JSONObject request = new JSONObject();
-        request.put("accessToken", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0Iiwicm9sZXMiOnsidXNlclVpZCI6NCwidXNlck5pY2tOYW1lIjoibkd5dSIsInVzZXJBZ2UiOjIzfSwiaWF0IjoxNjQ3NDA5ODQ0LCJleHAiOjE2NDc0MTM0NDR9.gv9cNrEkvJjzydgZhwGV-5ju36y045NiBxgYHOh55-U");
-        mockMvc.perform(
-                        post("/api/auth/check")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .content(request.toString()))
                 .andExpect(status().isOk())

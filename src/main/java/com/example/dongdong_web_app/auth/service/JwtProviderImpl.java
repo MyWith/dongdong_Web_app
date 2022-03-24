@@ -75,12 +75,12 @@ public class JwtProviderImpl implements JwtProvider {
     }
 
     @Override
-    public boolean validationToken(String token) throws JSONException {
+    public boolean validationToken(String token){
         try {
             Jwts.parser().setSigningKey(secret).parseClaimsJws(token);
             return true;
         }catch (Exception e){
-            throw new JSONException("Expired Token");
+            return false;
         }
     }
 

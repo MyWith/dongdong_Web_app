@@ -3,12 +3,16 @@ package com.example.dongdong_web_app.auth.entity;
 import lombok.*;
 import javax.persistence.*;;
 
-@Entity
+
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name = "user")
+@Data
+@Entity(name = "user")
+@Table(name = "USER", uniqueConstraints = {
+        @UniqueConstraint(columnNames = {"userEmail", "userNickName"})
+})
 public class AuthEntity {
 
     @Id

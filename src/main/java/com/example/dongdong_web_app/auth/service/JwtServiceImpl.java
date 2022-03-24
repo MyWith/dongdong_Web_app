@@ -2,26 +2,35 @@ package com.example.dongdong_web_app.auth.service;
 
 import com.example.dongdong_web_app.auth.dto.SignInDto;
 import com.example.dongdong_web_app.auth.dto.TokenDto;
-import com.example.dongdong_web_app.auth.repository.AuthRepository;
 
+import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class JwtServiceImpl implements JwtService{
 
-    @Autowired
-    private JwtProvider jwtProvider;
-    @Autowired
-    private AuthRepository authRepository;
+    @Autowired private JwtProvider jwtProvider;
 
+    @Override
     public TokenDto reissueToken(TokenDto tokenDto) throws Exception {
         if(!jwtProvider.validationToken(tokenDto.getRefreshToken())) {
-            throw new Exception("TEST");
+            throw new JSONException("Expired Token");
         }
 
         SignInDto.Response response = jwtProvider.getUserData(tokenDto.getAccessToken());
 
+        tokenDto = jwtProvider.createToken(response.getInfo().getUserUid(), response.getInfo());
+
+        return tokenDto;
+    }
+
+    @Override
+    public TokenDto accessTokenCheck(TokenDto tokenDto) throws Exception {
+
+        if(!jwtProvider.validationToken(tokenDto.getAccessToken())){
+            return this.reissueToken(tokenDto);
+        }
 
         return tokenDto;
     }
