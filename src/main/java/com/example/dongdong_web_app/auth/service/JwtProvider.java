@@ -3,7 +3,6 @@ package com.example.dongdong_web_app.auth.service;
 import com.example.dongdong_web_app.auth.dto.SignInDto;
 import com.example.dongdong_web_app.auth.dto.TokenDto;
 import io.jsonwebtoken.Claims;
-import org.json.JSONException;
 
 public interface JwtProvider {
     public TokenDto createToken(Long userid, SignInDto.Info response);

@@ -6,7 +6,6 @@ import com.example.dongdong_web_app.auth.entity.AuthEntity;
 import com.example.dongdong_web_app.auth.repository.AuthRepository;
 import io.jsonwebtoken.*;
 import lombok.extern.slf4j.Slf4j;
-import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

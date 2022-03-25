@@ -25,6 +25,16 @@ public class SignInDto {
 
     @Getter
     @Setter
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public static class Location{
+        private double userLat;
+        private double userLon;
+    }
+
+
+    @Getter
+    @Setter
     public static class Request{
         private String userEmail;
         private String userPassword;
@@ -36,6 +46,7 @@ public class SignInDto {
     public static class Response{
         private Info info;
         private Animal animal;
+        private Location location;
         private TokenDto token;
         private String userEmail;
     }

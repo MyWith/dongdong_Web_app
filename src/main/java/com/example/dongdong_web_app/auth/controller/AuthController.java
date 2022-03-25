@@ -8,7 +8,6 @@ import com.example.dongdong_web_app.auth.service.JwtProvider;
 import com.example.dongdong_web_app.auth.service.JwtService;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONException;
-import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.http.ResponseEntity;
@@ -28,12 +27,6 @@ public class AuthController {
     public ResponseEntity signIn(@RequestBody SignInDto.Request signin) {
         log.info("[POST] SignInData - " + signin.getUserEmail());
         log.info("[POST] SignInData - " + signin.getUserPassword());
-        SignInDto.Response response = authService.getUserData(signin.getUserEmail(), signin.getUserPassword());
-        return new ResponseEntity(response, null, 200);
-    }
-
-    @PostMapping("/signintest")
-    public ResponseEntity signInTest(@ModelAttribute SignInDto.Request signin){
         SignInDto.Response response = authService.getUserData(signin.getUserEmail(), signin.getUserPassword());
         return new ResponseEntity(response, null, 200);
     }

@@ -17,7 +17,7 @@ public class AuthEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long userUid;
+    private long userUid;
 
     private String userEmail;
     private String userPassword;
@@ -25,5 +25,8 @@ public class AuthEntity {
     private int userAge;
     private String animalName;
     private String animalKind;
+
+    private double userLat;
+    private double userLon;
 
 }

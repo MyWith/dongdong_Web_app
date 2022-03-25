@@ -5,7 +5,6 @@ import com.example.dongdong_web_app.auth.dto.SignUpDto;
 import com.example.dongdong_web_app.auth.dto.TokenDto;
 import com.example.dongdong_web_app.auth.entity.AuthEntity;
 import com.example.dongdong_web_app.auth.repository.AuthRepository;
-import com.example.dongdong_web_app.auth.service.JwtProvider;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -33,6 +32,7 @@ public class AuthServiceImpl implements AuthService {
             AuthEntity UserData = authRepository.findByUserEmail(user_email);
             SignInDto.Info info = new SignInDto.Info(UserData.getUserUid(), UserData.getUserNickName(), UserData.getUserAge());
             SignInDto.Animal animal = new SignInDto.Animal(UserData.getAnimalName(), UserData.getAnimalKind());
+            SignInDto.Location location = new SignInDto.Location(UserData.getUserLat(), UserData.getUserLon());
 
             TokenDto token = jwt.createToken( UserData.getUserUid(), info );
 
@@ -41,6 +41,7 @@ public class AuthServiceImpl implements AuthService {
                     .info(info)
                     .token(token)
                     .animal(animal)
+                    .location(location)
                     .build();
 
             return response;
