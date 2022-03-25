@@ -1,6 +1,6 @@
 package com.example.dongdong_web_app.auth;
 
-import com.example.dongdong_web_app.auth.repository.AuthRepository;
+import com.example.dongdong_web_app.application.auth.repository.AuthRepository;
 import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

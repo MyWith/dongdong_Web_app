@@ -242,3 +242,96 @@ Using generated security password: a1aa776d-c07e-4d10-9220-f53ec9a95004
 2022-03-25 15:21:33.302  INFO 25567 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-03-25 15:21:33.308  INFO 25567 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2022-03-25 15:21:33.325  INFO 25567 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-03-25 16:32:29.997  WARN 28026 --- [Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/ngyu/.gradle/caches/modules-2/files-2.1/org.json/json/20090211/c183aa3a2a6250293808bba12262c8920ce5a51c/json-20090211.jar!/org/json/JSONObject.class
+	jar:file:/Users/ngyu/.gradle/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2022-03-25 16:32:30.015  INFO 28026 --- [Test worker] c.e.d.location.updateLocation            : Starting updateLocation using Java 11.0.11 on gimnamgyuui-MacBookAir.local with PID 28026 (started by ngyu in /Users/ngyu/Documents/Develop/Java/study/dongdong_Web_App)
+2022-03-25 16:32:30.016  INFO 28026 --- [Test worker] c.e.d.location.updateLocation            : No active profile set, falling back to 1 default profile: "default"
+2022-03-25 16:32:31.379  INFO 28026 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-25 16:32:31.383  INFO 28026 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-03-25 16:32:31.444  INFO 28026 --- [Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dongdong_web_app.auth.repository.AuthRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-25 16:32:31.446  INFO 28026 --- [Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dongdong_web_app.location.repository.LocationRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-25 16:32:31.446  INFO 28026 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 0 JDBC repository interfaces.
+2022-03-25 16:32:31.486  INFO 28026 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-25 16:32:31.487  INFO 28026 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-25 16:32:31.537  INFO 28026 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 2 JPA repository interfaces.
+2022-03-25 16:32:32.094  INFO 28026 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$711694f6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-03-25 16:32:32.195  INFO 28026 --- [Test worker] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-03-25 16:32:32.838  INFO 28026 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-25 16:32:32.892  INFO 28026 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-25 16:32:33.084  INFO 28026 --- [Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-25 16:32:33.186  INFO 28026 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-25 16:32:33.528  INFO 28026 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-25 16:32:33.562  INFO 28026 --- [Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2022-03-25 16:32:34.409  INFO 28026 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-25 16:32:34.421  INFO 28026 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-25 16:32:35.119  WARN 28026 --- [Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-25 16:32:35.615  INFO 28026 --- [Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 6312acd2-93b5-43dd-9c53-2a16bf13786f
+
+2022-03-25 16:32:35.742  INFO 28026 --- [Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-03-25 16:32:36.746  WARN 28026 --- [Test worker] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-03-25 16:32:37.229  INFO 28026 --- [Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-03-25 16:32:37.230  INFO 28026 --- [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-03-25 16:32:37.231  INFO 28026 --- [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2022-03-25 16:32:37.270  INFO 28026 --- [Test worker] c.e.d.location.updateLocation            : Started updateLocation in 8.068 seconds (JVM running for 10.138)
+2022-03-25 16:32:37.709  INFO 28026 --- [Test worker] c.e.d.l.service.LocationServiceImpl      : LAT : 0.1234
+2022-03-25 16:32:37.710  INFO 28026 --- [Test worker] c.e.d.l.service.LocationServiceImpl      : LOT : 1.214124
+2022-03-25 16:32:37.710  INFO 28026 --- [Test worker] c.e.d.l.service.LocationServiceImpl      : userUid : 1
+2022-03-25 16:32:45.413  INFO 28026 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-25 16:32:45.426  INFO 28026 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-25 16:32:45.450  INFO 28026 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-03-25 16:35:11.192  WARN 28055 --- [Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/ngyu/.gradle/caches/modules-2/files-2.1/org.json/json/20090211/c183aa3a2a6250293808bba12262c8920ce5a51c/json-20090211.jar!/org/json/JSONObject.class
+	jar:file:/Users/ngyu/.gradle/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2022-03-25 16:35:11.208  INFO 28055 --- [Test worker] c.e.d.location.updateLocation            : Starting updateLocation using Java 11.0.11 on gimnamgyuui-MacBookAir.local with PID 28055 (started by ngyu in /Users/ngyu/Documents/Develop/Java/study/dongdong_Web_App)
+2022-03-25 16:35:11.210  INFO 28055 --- [Test worker] c.e.d.location.updateLocation            : No active profile set, falling back to 1 default profile: "default"
+2022-03-25 16:35:12.609  INFO 28055 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-25 16:35:12.612  INFO 28055 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-03-25 16:35:12.681  INFO 28055 --- [Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dongdong_web_app.auth.repository.AuthRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-25 16:35:12.682  INFO 28055 --- [Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dongdong_web_app.location.repository.LocationRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-25 16:35:12.683  INFO 28055 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 0 JDBC repository interfaces.
+2022-03-25 16:35:12.726  INFO 28055 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-25 16:35:12.728  INFO 28055 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-25 16:35:12.778  INFO 28055 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 2 JPA repository interfaces.
+2022-03-25 16:35:13.361  INFO 28055 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$4d4029fc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-03-25 16:35:13.463  INFO 28055 --- [Test worker] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-03-25 16:35:14.105  INFO 28055 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-25 16:35:14.164  INFO 28055 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-25 16:35:14.349  INFO 28055 --- [Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-25 16:35:14.446  INFO 28055 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-25 16:35:14.780  INFO 28055 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-25 16:35:14.830  INFO 28055 --- [Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2022-03-25 16:35:15.683  INFO 28055 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-25 16:35:15.695  INFO 28055 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-25 16:35:16.437  WARN 28055 --- [Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-25 16:35:16.972  INFO 28055 --- [Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c14456ec-6733-4705-8e67-417925c50d0e
+
+2022-03-25 16:35:17.132  INFO 28055 --- [Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-03-25 16:35:18.099  WARN 28055 --- [Test worker] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-03-25 16:35:18.604  INFO 28055 --- [Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-03-25 16:35:18.605  INFO 28055 --- [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-03-25 16:35:18.606  INFO 28055 --- [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2022-03-25 16:35:18.640  INFO 28055 --- [Test worker] c.e.d.location.updateLocation            : Started updateLocation in 8.197 seconds (JVM running for 10.103)
+2022-03-25 16:35:19.182  INFO 28055 --- [Test worker] c.e.d.l.service.LocationServiceImpl      : LAT : 0.1234
+2022-03-25 16:35:19.183  INFO 28055 --- [Test worker] c.e.d.l.service.LocationServiceImpl      : LOT : 1.214124
+2022-03-25 16:35:19.183  INFO 28055 --- [Test worker] c.e.d.l.service.LocationServiceImpl      : userUid : 1
+2022-03-25 16:35:27.206  WARN 28055 --- [Test worker] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.ModelAttributeMethodProcessor$1: org.springframework.validation.BeanPropertyBindingResult: 1 errors<EOL>Field error in object 'request' on field 'userUid': rejected value [null]; codes [typeMismatch.request.userUid,typeMismatch.userUid,typeMismatch.long,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [request.userUid,userUid]; arguments []; default message [userUid]]; default message [Failed to convert value of type 'null' to required type 'long'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [null] to type [long] for value 'null'; nested exception is java.lang.IllegalArgumentException: A null value cannot be assigned to a primitive type]]
+2022-03-25 16:35:27.244  INFO 28055 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-25 16:35:27.251  INFO 28055 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-25 16:35:27.285  INFO 28055 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

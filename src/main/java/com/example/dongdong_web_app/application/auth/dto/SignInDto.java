@@ -1,8 +1,9 @@
-package com.example.dongdong_web_app.auth.dto;
+package com.example.dongdong_web_app.application.auth.dto;
 
 import lombok.*;
 
-public class SignUpDto {
+public class SignInDto {
+
     @Getter
     @Setter
     @AllArgsConstructor
@@ -24,10 +25,30 @@ public class SignUpDto {
 
     @Getter
     @Setter
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public static class Location{
+        private double userLat;
+        private double userLon;
+    }
+
+
+    @Getter
+    @Setter
     public static class Request{
-        private SignUpDto.Info info;
-        private SignUpDto.Animal animal;
         private String userEmail;
         private String userPassword;
     }
+
+    @Getter
+    @Setter
+    @Builder
+    public static class Response{
+        private Info info;
+        private Animal animal;
+        private Location location;
+        private TokenDto token;
+        private String userEmail;
+    }
+
 }

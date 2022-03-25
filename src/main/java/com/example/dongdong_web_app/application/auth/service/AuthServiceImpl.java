@@ -1,10 +1,10 @@
-package com.example.dongdong_web_app.auth.service;
+package com.example.dongdong_web_app.application.auth.service;
 
-import com.example.dongdong_web_app.auth.dto.SignInDto;
-import com.example.dongdong_web_app.auth.dto.SignUpDto;
-import com.example.dongdong_web_app.auth.dto.TokenDto;
-import com.example.dongdong_web_app.auth.entity.AuthEntity;
-import com.example.dongdong_web_app.auth.repository.AuthRepository;
+import com.example.dongdong_web_app.application.auth.dto.SignInDto;
+import com.example.dongdong_web_app.application.auth.dto.SignUpDto;
+import com.example.dongdong_web_app.application.auth.dto.TokenDto;
+import com.example.dongdong_web_app.application.auth.repository.AuthRepository;
+import com.example.dongdong_web_app.application.auth.entity.AuthEntity;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

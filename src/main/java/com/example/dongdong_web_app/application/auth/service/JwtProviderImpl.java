@@ -1,9 +1,9 @@
-package com.example.dongdong_web_app.auth.service;
+package com.example.dongdong_web_app.application.auth.service;
 
-import com.example.dongdong_web_app.auth.dto.SignInDto;
-import com.example.dongdong_web_app.auth.dto.TokenDto;
-import com.example.dongdong_web_app.auth.entity.AuthEntity;
-import com.example.dongdong_web_app.auth.repository.AuthRepository;
+import com.example.dongdong_web_app.application.auth.repository.AuthRepository;
+import com.example.dongdong_web_app.application.auth.dto.SignInDto;
+import com.example.dongdong_web_app.application.auth.dto.TokenDto;
+import com.example.dongdong_web_app.application.auth.entity.AuthEntity;
 import io.jsonwebtoken.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,8 @@ import java.util.Date;
 @Slf4j
 public class JwtProviderImpl implements JwtProvider {
 
-    @Autowired AuthRepository authRepository;
+    @Autowired
+    AuthRepository authRepository;
 
     @Value("${jwt.secret}")
     private String secret;

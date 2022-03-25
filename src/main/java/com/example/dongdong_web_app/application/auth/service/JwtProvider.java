@@ -1,7 +1,7 @@
-package com.example.dongdong_web_app.auth.service;
+package com.example.dongdong_web_app.application.auth.service;
 
-import com.example.dongdong_web_app.auth.dto.SignInDto;
-import com.example.dongdong_web_app.auth.dto.TokenDto;
+import com.example.dongdong_web_app.application.auth.dto.SignInDto;
+import com.example.dongdong_web_app.application.auth.dto.TokenDto;
 import io.jsonwebtoken.Claims;
 
 public interface JwtProvider {

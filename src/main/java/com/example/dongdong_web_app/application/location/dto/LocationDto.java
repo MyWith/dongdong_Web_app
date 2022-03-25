@@ -1,4 +1,4 @@
-package com.example.dongdong_web_app.location.dto;
+package com.example.dongdong_web_app.application.location.dto;
 
 import lombok.Builder;
 import lombok.Getter;

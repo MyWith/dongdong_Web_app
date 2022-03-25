@@ -1,4 +1,4 @@
-package com.example.dongdong_web_app.auth.entity;
+package com.example.dongdong_web_app.application.auth.entity;
 
 import lombok.*;
 import javax.persistence.*;;

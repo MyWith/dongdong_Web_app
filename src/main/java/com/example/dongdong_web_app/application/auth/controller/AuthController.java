@@ -1,11 +1,11 @@
-package com.example.dongdong_web_app.auth.controller;
+package com.example.dongdong_web_app.application.auth.controller;
 
-import com.example.dongdong_web_app.auth.dto.SignInDto;
-import com.example.dongdong_web_app.auth.dto.SignUpDto;
-import com.example.dongdong_web_app.auth.dto.TokenDto;
-import com.example.dongdong_web_app.auth.service.AuthService;
-import com.example.dongdong_web_app.auth.service.JwtProvider;
-import com.example.dongdong_web_app.auth.service.JwtService;
+import com.example.dongdong_web_app.application.auth.dto.SignInDto;
+import com.example.dongdong_web_app.application.auth.dto.SignUpDto;
+import com.example.dongdong_web_app.application.auth.dto.TokenDto;
+import com.example.dongdong_web_app.application.auth.service.AuthService;
+import com.example.dongdong_web_app.application.auth.service.JwtProvider;
+import com.example.dongdong_web_app.application.auth.service.JwtService;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;

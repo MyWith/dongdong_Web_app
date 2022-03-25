@@ -1,6 +1,6 @@
-package com.example.dongdong_web_app.location.repository;
+package com.example.dongdong_web_app.application.location.repository;
 
-import com.example.dongdong_web_app.auth.entity.AuthEntity;
+import com.example.dongdong_web_app.application.auth.entity.AuthEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import org.springframework.data.jpa.repository.Modifying;
