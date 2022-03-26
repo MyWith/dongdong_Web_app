@@ -22,4 +22,6 @@ public class HospitalEntity {
 
     private long hospitalLat;
     private long hospitalLot;
+
+    private String type;
 }

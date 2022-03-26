@@ -561,3 +561,6 @@ Using generated security password: 5c4658e5-ab8e-429c-b57b-a88e95a91bdc
 2022-03-26 13:51:46.409  INFO 36792 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2022-03-26 13:51:46.427  INFO 36792 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
 2022-03-26 13:51:46.582  INFO 36792 --- [http-nio-8080-exec-1] c.e.d.a.auth.controller.AuthController   : [POST] SignUpData - com.example.dongdong_web_app.application.auth.dto.SignUpDto$Request@1547dcc0
+2022-03-26 13:57:10.572  INFO 36792 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-26 13:57:10.680  INFO 36792 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-26 13:57:10.781  INFO 36792 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

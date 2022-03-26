@@ -14,6 +14,7 @@ public class HospitalDto {
 
     public static class Hospital{
         private Location location;
+        private String type;
         private String hospitalName;
         private String hospitalAddress;
         private String hospitalTime;
