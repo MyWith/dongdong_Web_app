@@ -1,10 +1,13 @@
 package com.example.dongdong_web_app.application.location.service;
 
+import com.example.dongdong_web_app.application.auth.entity.AuthEntity;
 import com.example.dongdong_web_app.application.location.dto.LocationDto;
 import com.example.dongdong_web_app.application.location.repository.LocationRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 @Slf4j
@@ -24,5 +27,12 @@ public class LocationServiceImpl implements LocationService{
 
         locationRepository.updateUserLocation(lat, lot , userUid);
         return false;
+    }
+
+    @Override
+    public List<AuthEntity> getNearUser(LocationDto.Request nowUserLocation){
+
+
+        return null;
     }
 }
