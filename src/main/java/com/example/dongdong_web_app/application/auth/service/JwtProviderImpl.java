@@ -56,8 +56,8 @@ public class JwtProviderImpl implements JwtProvider {
     }
 
     @Override
-    public SignInDto.Response getUserData(String token) throws Exception {
-        Claims claims = parseClaims(token);
+    public SignInDto.Response getUserData(TokenDto token) throws Exception {
+        Claims claims = parseClaims(token.getAccessToken());
 
         if (claims.get(Role) == null){
             throw new Exception("Role is not defined");
@@ -66,11 +66,17 @@ public class JwtProviderImpl implements JwtProvider {
         AuthEntity auth = authRepository.findByUserUid(Long.valueOf(claims.getSubject()));
         SignInDto.Info info = new SignInDto.Info(auth.getUserUid(), auth.getUserNickName(), auth.getUserAge());
         SignInDto.Animal animal = new SignInDto.Animal(auth.getAnimalName(), auth.getAnimalKind());
+        TokenDto tokenDto = token;
+        if(validationToken(token.getAccessToken())){
+            long userUid = Long.valueOf(claims.getSubject());
+            tokenDto = createToken( userUid, info );
+        }
 
         return SignInDto.Response.builder()
                 .info(info)
                 .animal(animal)
                 .userEmail(auth.getUserEmail())
+                .token(tokenDto)
                 .build();
     }
 

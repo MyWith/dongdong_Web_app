@@ -6,7 +6,8 @@ import io.jsonwebtoken.Claims;
 
 public interface JwtProvider {
     public TokenDto createToken(Long userid, SignInDto.Info response);
-    public SignInDto.Response getUserData(String token) throws Exception;
+    public SignInDto.Response getUserData(TokenDto token) throws Exception;
     boolean validationToken(String token);
     Claims parseClaims(String token);
+
 }

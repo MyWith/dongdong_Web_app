@@ -18,7 +18,7 @@ public class JwtServiceImpl implements JwtService{
             throw new JSONException("Expired Token");
         }
 
-        SignInDto.Response response = jwtProvider.getUserData(tokenDto.getAccessToken());
+        SignInDto.Response response = jwtProvider.getUserData(tokenDto);
 
         tokenDto = jwtProvider.createToken(response.getInfo().getUserUid(), response.getInfo());
 

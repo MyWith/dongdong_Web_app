@@ -72,4 +72,12 @@ public class AuthServiceImpl implements AuthService {
             return new ResponseEntity(null,null,400);
         }
     }
+
+    public SignInDto.Response autoLogin(TokenDto tokenDto){
+
+
+
+        return null;
+    }
+
 }
