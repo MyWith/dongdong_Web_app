@@ -1,7 +1,8 @@
 package com.example.dongdong_web_app.application.auth.entity;
 
 import lombok.*;
-import javax.persistence.*;;
+import javax.persistence.*;
+import java.util.Date;
 
 
 @Getter
@@ -25,6 +26,7 @@ public class AuthEntity {
     private int userAge;
     private String animalName;
     private String animalKind;
+    private Date animalAge;
 
     private double userLat;
     private double userLon;
