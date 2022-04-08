@@ -12,6 +12,6 @@ public class LocationDto {
     public static class Request{
         private long userUid;
         private double userLat;
-        private double userLot;
+        private double userLon;
     }
 }

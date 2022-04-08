@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Slf4j
@@ -18,14 +19,21 @@ public class LocationServiceImpl implements LocationService{
     @Override
     public boolean saveUserLocation(LocationDto.Request locationDto){
         double lat = (double) locationDto.getUserLat();
-        double lot = (double) locationDto.getUserLot();
+        double lon = (double) locationDto.getUserLon();
         long userUid = (long) locationDto.getUserUid();
 
         log.info("LAT : " + String.valueOf(lat));
-        log.info("LOT : " + String.valueOf(lot));
+        log.info("LON : " + String.valueOf(lon));
         log.info("userUid : " + String.valueOf(userUid));
 
-        locationRepository.updateUserLocation(lat, lot , userUid);
+        Optional<AuthEntity> user = locationRepository.findById(String.valueOf(userUid));
+
+        user.ifPresent( selectUser ->{
+            selectUser.setUserLat(lat);
+            selectUser.setUserLon(lon);
+            locationRepository.save(selectUser);
+        } );
+
         return false;
     }
 
