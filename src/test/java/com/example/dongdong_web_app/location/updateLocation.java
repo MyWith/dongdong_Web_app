@@ -18,18 +18,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 public class updateLocation {
     @Autowired LocationRepository locationRepository;
     @Autowired MockMvc mockMvc;
-    @Test
-    public void 위치정보업데이트_1(){
-        double lat = 0.123;
-        double lot = 1.123;
-        long uid = 1;
 
-        try {
-            locationRepository.updateUserLocation(lat,lot,uid);
-        }catch(Exception e){
-            throw new RuntimeException(e);
-        }
-    }
 
     @Test
     public void 위치정보업데이트_2() throws Exception {
