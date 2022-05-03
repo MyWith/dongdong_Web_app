@@ -2,6 +2,8 @@ package com.example.dongdong_web_app.application.auth.dto;
 
 import lombok.*;
 
+import java.util.Date;
+
 public class SignInDto {
 
     @Getter
@@ -11,7 +13,7 @@ public class SignInDto {
     public static class Info{
         private long userUid;
         private String userNickName;
-        private int userAge;
+        private Date userAge;
     }
 
     @Getter
@@ -31,7 +33,6 @@ public class SignInDto {
         private double userLat;
         private double userLon;
     }
-
 
     @Getter
     @Setter

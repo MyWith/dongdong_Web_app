@@ -23,12 +23,15 @@ public class AuthEntity {
     private String userEmail;
     private String userPassword;
     private String userNickName;
-    private int userAge;
+    private Date userAge;
     private String animalName;
     private String animalKind;
     private Date animalAge;
 
     private double userLat;
     private double userLon;
+
+    private Date createdAt;
+    private Date updatedAt;
 
 }
