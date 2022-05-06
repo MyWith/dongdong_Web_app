@@ -1251,3 +1251,352 @@ Using generated security password: 1d0f8fee-5704-4f27-928f-2dc0712ce67c
 2022-05-03 19:22:41.751  WARN 5405 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m28s262ms).
 2022-05-03 19:28:10.311  WARN 5405 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m28s561ms).
 2022-05-03 19:31:13.432  WARN 5405 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m33s95ms).
+2022-05-03 20:15:49.967  INFO 5405 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-03 20:15:50.007  INFO 5405 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-03 20:15:50.108  INFO 5405 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-03 20:16:15.918  INFO 22278 --- [restartedMain] c.e.d.DongdongWebAppApplication          : Starting DongdongWebAppApplication using Java 11.0.11 on gimnamgyuui-MacBookAir.local with PID 22278 (/Users/ngyu/Documents/Develop/Java/study/dongdong_Web_App/build/classes/java/main started by ngyu in /Users/ngyu/Documents/Develop/Java/study/dongdong_Web_App)
+2022-05-03 20:16:15.921  INFO 22278 --- [restartedMain] c.e.d.DongdongWebAppApplication          : The following 1 profile is active: "dev"
+2022-05-03 20:16:15.983  INFO 22278 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-03 20:16:15.984  INFO 22278 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-03 20:16:17.407  INFO 22278 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-03 20:16:17.413  INFO 22278 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-05-03 20:16:17.491  INFO 22278 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dongdong_web_app.application.auth.repository.AuthRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-05-03 20:16:17.495  INFO 22278 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dongdong_web_app.application.hospital.repository.HospitalRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-05-03 20:16:17.498  INFO 22278 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dongdong_web_app.application.location.repository.LocationRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-05-03 20:16:17.500  INFO 22278 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78 ms. Found 0 JDBC repository interfaces.
+2022-05-03 20:16:17.517  INFO 22278 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-03 20:16:17.518  INFO 22278 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-03 20:16:17.558  INFO 22278 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 3 JPA repository interfaces.
+2022-05-03 20:16:18.140  INFO 22278 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$30fb6201] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-03 20:16:18.424  INFO 22278 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-05-03 20:16:20.092  INFO 22278 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-03 20:16:20.154  INFO 22278 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-03 20:16:20.155  INFO 22278 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-05-03 20:16:20.355  INFO 22278 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-03 20:16:20.356  INFO 22278 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4372 ms
+2022-05-03 20:16:20.740  INFO 22278 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-03 20:16:20.766  INFO 22278 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-05-03 20:16:20.864  INFO 22278 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-03 20:16:20.915  INFO 22278 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-03 20:16:21.057  INFO 22278 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-03 20:16:21.068  INFO 22278 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2022-05-03 20:16:21.763  INFO 22278 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-03 20:16:21.770  INFO 22278 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-03 20:16:22.211  WARN 22278 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-03 20:16:22.549  INFO 22278 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4f8b5952-612f-441d-9fe7-9adffb3c38b2
+
+2022-05-03 20:16:22.604  INFO 22278 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-05-03 20:16:23.085  WARN 22278 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-05-03 20:16:23.364  INFO 22278 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-03 20:16:23.416  INFO 22278 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-03 20:16:23.433  INFO 22278 --- [restartedMain] c.e.d.DongdongWebAppApplication          : Started DongdongWebAppApplication in 8.311 seconds (JVM running for 9.48)
+2022-05-03 20:23:42.921  INFO 22278 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-03 20:23:42.961  INFO 22278 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-03 20:23:43.000  INFO 22278 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-03 20:24:06.419  INFO 23442 --- [restartedMain] c.e.d.DongdongWebAppApplication          : Starting DongdongWebAppApplication using Java 11.0.11 on gimnamgyuui-MacBookAir.local with PID 23442 (/Users/ngyu/Documents/Develop/Java/study/dongdong_Web_App/build/classes/java/main started by ngyu in /Users/ngyu/Documents/Develop/Java/study/dongdong_Web_App)
+2022-05-03 20:24:06.422  INFO 23442 --- [restartedMain] c.e.d.DongdongWebAppApplication          : The following 1 profile is active: "dev"
+2022-05-03 20:24:06.476  INFO 23442 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-03 20:24:06.476  INFO 23442 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-03 20:24:07.535  INFO 23442 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-03 20:24:07.536  INFO 23442 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-05-03 20:24:07.576  INFO 23442 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dongdong_web_app.application.auth.repository.AuthRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-05-03 20:24:07.579  INFO 23442 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dongdong_web_app.application.hospital.repository.HospitalRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-05-03 20:24:07.583  INFO 23442 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dongdong_web_app.application.location.repository.LocationRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-05-03 20:24:07.584  INFO 23442 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 0 JDBC repository interfaces.
+2022-05-03 20:24:07.602  INFO 23442 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-03 20:24:07.604  INFO 23442 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-03 20:24:07.696  INFO 23442 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 3 JPA repository interfaces.
+2022-05-03 20:24:08.230  INFO 23442 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$c11f041c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-03 20:24:08.338  INFO 23442 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-05-03 20:24:09.095  INFO 23442 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-03 20:24:09.104  INFO 23442 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-03 20:24:09.108  INFO 23442 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-05-03 20:24:09.218  INFO 23442 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-03 20:24:09.218  INFO 23442 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2741 ms
+2022-05-03 20:24:09.404  INFO 23442 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-03 20:24:09.429  INFO 23442 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-05-03 20:24:09.493  INFO 23442 --- [restartedMain] o.h.spatial.integration.SpatialService   : HHH80000001: hibernate-spatial integration enabled : true
+2022-05-03 20:24:09.510  INFO 23442 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-03 20:24:09.562  INFO 23442 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-03 20:24:09.705  INFO 23442 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-03 20:24:09.721  INFO 23442 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2022-05-03 20:24:09.821  WARN 23442 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is java.lang.NoSuchMethodError: org.hibernate.type.descriptor.java.ImmutableMutabilityPlan.instance()Lorg/hibernate/type/descriptor/java/ImmutableMutabilityPlan;
+2022-05-03 20:24:09.823  INFO 23442 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-03 20:24:09.849  INFO 23442 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-03 20:24:09.852  INFO 23442 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-05-03 20:24:09.868  INFO 23442 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-05-03 20:24:09.903 ERROR 23442 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.hibernate.type.descriptor.java.AbstractJavaType.<init>(AbstractJavaType.java:40)
+
+The following method did not exist:
+
+    org.hibernate.type.descriptor.java.ImmutableMutabilityPlan.instance()Lorg/hibernate/type/descriptor/java/ImmutableMutabilityPlan;
+
+The calling method's class, org.hibernate.type.descriptor.java.AbstractJavaType, was loaded from the following location:
+
+    jar:file:/Users/ngyu/.gradle/caches/modules-2/files-2.1/org.hibernate.orm/hibernate-core/6.0.0.Final/b18aa4d6eff8b483000eeba452984f72516c416c/hibernate-core-6.0.0.Final.jar!/org/hibernate/type/descriptor/java/AbstractJavaType.class
+
+The called method's class, org.hibernate.type.descriptor.java.ImmutableMutabilityPlan, is available from the following locations:
+
+    jar:file:/Users/ngyu/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.6.5.Final/d5c41d9018d16ca6076726f0f037ba8a0ebc0cb4/hibernate-core-5.6.5.Final.jar!/org/hibernate/type/descriptor/java/ImmutableMutabilityPlan.class
+    jar:file:/Users/ngyu/.gradle/caches/modules-2/files-2.1/org.hibernate.orm/hibernate-core/6.0.0.Final/b18aa4d6eff8b483000eeba452984f72516c416c/hibernate-core-6.0.0.Final.jar!/org/hibernate/type/descriptor/java/ImmutableMutabilityPlan.class
+
+The called method's class hierarchy was loaded from the following locations:
+
+    org.hibernate.type.descriptor.java.ImmutableMutabilityPlan: file:/Users/ngyu/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.6.5.Final/d5c41d9018d16ca6076726f0f037ba8a0ebc0cb4/hibernate-core-5.6.5.Final.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains compatible versions of the classes org.hibernate.type.descriptor.java.AbstractJavaType and org.hibernate.type.descriptor.java.ImmutableMutabilityPlan
+
+2022-05-03 20:25:00.201  INFO 23601 --- [restartedMain] c.e.d.DongdongWebAppApplication          : Starting DongdongWebAppApplication using Java 11.0.11 on gimnamgyuui-MacBookAir.local with PID 23601 (/Users/ngyu/Documents/Develop/Java/study/dongdong_Web_App/build/classes/java/main started by ngyu in /Users/ngyu/Documents/Develop/Java/study/dongdong_Web_App)
+2022-05-03 20:25:00.203  INFO 23601 --- [restartedMain] c.e.d.DongdongWebAppApplication          : The following 1 profile is active: "dev"
+2022-05-03 20:25:00.253  INFO 23601 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-03 20:25:00.254  INFO 23601 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-03 20:25:01.261  INFO 23601 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-03 20:25:01.264  INFO 23601 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-05-03 20:25:01.308  INFO 23601 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dongdong_web_app.application.auth.repository.AuthRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-05-03 20:25:01.311  INFO 23601 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dongdong_web_app.application.hospital.repository.HospitalRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-05-03 20:25:01.316  INFO 23601 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dongdong_web_app.application.location.repository.LocationRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-05-03 20:25:01.317  INFO 23601 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 0 JDBC repository interfaces.
+2022-05-03 20:25:01.336  INFO 23601 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-03 20:25:01.336  INFO 23601 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-03 20:25:01.404  INFO 23601 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 3 JPA repository interfaces.
+2022-05-03 20:25:01.788  INFO 23601 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$6ef13928] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-03 20:25:01.842  INFO 23601 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-05-03 20:25:02.204  INFO 23601 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-03 20:25:02.213  INFO 23601 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-03 20:25:02.217  INFO 23601 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-05-03 20:25:02.299  INFO 23601 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-03 20:25:02.299  INFO 23601 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2044 ms
+2022-05-03 20:25:02.501  INFO 23601 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-03 20:25:02.550  INFO 23601 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-05-03 20:25:02.618  INFO 23601 --- [restartedMain] o.h.spatial.integration.SpatialService   : HHH80000001: hibernate-spatial integration enabled : true
+2022-05-03 20:25:02.635  INFO 23601 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-03 20:25:02.685  INFO 23601 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-03 20:25:02.863  INFO 23601 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-03 20:25:02.875  INFO 23601 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2022-05-03 20:25:02.911  WARN 23601 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is java.lang.NoSuchMethodError: org.hibernate.type.descriptor.java.ImmutableMutabilityPlan.instance()Lorg/hibernate/type/descriptor/java/ImmutableMutabilityPlan;
+2022-05-03 20:25:02.913  INFO 23601 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-03 20:25:02.922  INFO 23601 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-03 20:25:02.928  INFO 23601 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-05-03 20:25:02.945  INFO 23601 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-05-03 20:25:02.969 ERROR 23601 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.hibernate.type.descriptor.java.AbstractJavaType.<init>(AbstractJavaType.java:40)
+
+The following method did not exist:
+
+    org.hibernate.type.descriptor.java.ImmutableMutabilityPlan.instance()Lorg/hibernate/type/descriptor/java/ImmutableMutabilityPlan;
+
+The calling method's class, org.hibernate.type.descriptor.java.AbstractJavaType, was loaded from the following location:
+
+    jar:file:/Users/ngyu/.gradle/caches/modules-2/files-2.1/org.hibernate.orm/hibernate-core/6.0.0.Final/b18aa4d6eff8b483000eeba452984f72516c416c/hibernate-core-6.0.0.Final.jar!/org/hibernate/type/descriptor/java/AbstractJavaType.class
+
+The called method's class, org.hibernate.type.descriptor.java.ImmutableMutabilityPlan, is available from the following locations:
+
+    jar:file:/Users/ngyu/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.6.5.Final/d5c41d9018d16ca6076726f0f037ba8a0ebc0cb4/hibernate-core-5.6.5.Final.jar!/org/hibernate/type/descriptor/java/ImmutableMutabilityPlan.class
+    jar:file:/Users/ngyu/.gradle/caches/modules-2/files-2.1/org.hibernate.orm/hibernate-core/6.0.0.Final/b18aa4d6eff8b483000eeba452984f72516c416c/hibernate-core-6.0.0.Final.jar!/org/hibernate/type/descriptor/java/ImmutableMutabilityPlan.class
+
+The called method's class hierarchy was loaded from the following locations:
+
+    org.hibernate.type.descriptor.java.ImmutableMutabilityPlan: file:/Users/ngyu/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.6.5.Final/d5c41d9018d16ca6076726f0f037ba8a0ebc0cb4/hibernate-core-5.6.5.Final.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains compatible versions of the classes org.hibernate.type.descriptor.java.AbstractJavaType and org.hibernate.type.descriptor.java.ImmutableMutabilityPlan
+
+2022-05-03 20:26:35.713  INFO 23869 --- [restartedMain] c.e.d.DongdongWebAppApplication          : Starting DongdongWebAppApplication using Java 11.0.11 on gimnamgyuui-MacBookAir.local with PID 23869 (/Users/ngyu/Documents/Develop/Java/study/dongdong_Web_App/build/classes/java/main started by ngyu in /Users/ngyu/Documents/Develop/Java/study/dongdong_Web_App)
+2022-05-03 20:26:35.716  INFO 23869 --- [restartedMain] c.e.d.DongdongWebAppApplication          : The following 1 profile is active: "dev"
+2022-05-03 20:26:35.799  INFO 23869 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-03 20:26:35.799  INFO 23869 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-03 20:26:36.746  INFO 23869 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-03 20:26:36.747  INFO 23869 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-05-03 20:26:36.789  INFO 23869 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dongdong_web_app.application.auth.repository.AuthRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-05-03 20:26:36.793  INFO 23869 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dongdong_web_app.application.hospital.repository.HospitalRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-05-03 20:26:36.796  INFO 23869 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dongdong_web_app.application.location.repository.LocationRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-05-03 20:26:36.797  INFO 23869 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 0 JDBC repository interfaces.
+2022-05-03 20:26:36.813  INFO 23869 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-03 20:26:36.814  INFO 23869 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-03 20:26:36.849  INFO 23869 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 3 JPA repository interfaces.
+2022-05-03 20:26:37.268  INFO 23869 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$c537a984] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-03 20:26:37.322  INFO 23869 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-05-03 20:26:37.680  INFO 23869 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-03 20:26:37.689  INFO 23869 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-03 20:26:37.693  INFO 23869 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-05-03 20:26:37.793  INFO 23869 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-03 20:26:37.794  INFO 23869 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1994 ms
+2022-05-03 20:26:37.987  INFO 23869 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-03 20:26:38.011  INFO 23869 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-05-03 20:26:38.081  INFO 23869 --- [restartedMain] o.h.spatial.integration.SpatialService   : HHH80000001: hibernate-spatial integration enabled : true
+2022-05-03 20:26:38.097  INFO 23869 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-03 20:26:38.142  INFO 23869 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-03 20:26:38.279  INFO 23869 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-03 20:26:38.292  INFO 23869 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2022-05-03 20:26:38.322  WARN 23869 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is java.lang.NoSuchMethodError: org.hibernate.type.descriptor.java.ImmutableMutabilityPlan.instance()Lorg/hibernate/type/descriptor/java/ImmutableMutabilityPlan;
+2022-05-03 20:26:38.323  INFO 23869 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-03 20:26:38.334  INFO 23869 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-03 20:26:38.337  INFO 23869 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-05-03 20:26:38.362  INFO 23869 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-05-03 20:26:38.378 ERROR 23869 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.hibernate.type.descriptor.java.AbstractJavaType.<init>(AbstractJavaType.java:40)
+
+The following method did not exist:
+
+    org.hibernate.type.descriptor.java.ImmutableMutabilityPlan.instance()Lorg/hibernate/type/descriptor/java/ImmutableMutabilityPlan;
+
+The calling method's class, org.hibernate.type.descriptor.java.AbstractJavaType, was loaded from the following location:
+
+    jar:file:/Users/ngyu/.gradle/caches/modules-2/files-2.1/org.hibernate.orm/hibernate-core/6.0.0.Final/b18aa4d6eff8b483000eeba452984f72516c416c/hibernate-core-6.0.0.Final.jar!/org/hibernate/type/descriptor/java/AbstractJavaType.class
+
+The called method's class, org.hibernate.type.descriptor.java.ImmutableMutabilityPlan, is available from the following locations:
+
+    jar:file:/Users/ngyu/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.6.5.Final/d5c41d9018d16ca6076726f0f037ba8a0ebc0cb4/hibernate-core-5.6.5.Final.jar!/org/hibernate/type/descriptor/java/ImmutableMutabilityPlan.class
+    jar:file:/Users/ngyu/.gradle/caches/modules-2/files-2.1/org.hibernate.orm/hibernate-core/6.0.0.Final/b18aa4d6eff8b483000eeba452984f72516c416c/hibernate-core-6.0.0.Final.jar!/org/hibernate/type/descriptor/java/ImmutableMutabilityPlan.class
+
+The called method's class hierarchy was loaded from the following locations:
+
+    org.hibernate.type.descriptor.java.ImmutableMutabilityPlan: file:/Users/ngyu/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.6.5.Final/d5c41d9018d16ca6076726f0f037ba8a0ebc0cb4/hibernate-core-5.6.5.Final.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains compatible versions of the classes org.hibernate.type.descriptor.java.AbstractJavaType and org.hibernate.type.descriptor.java.ImmutableMutabilityPlan
+
+2022-05-03 20:30:49.054  INFO 24651 --- [restartedMain] c.e.d.DongdongWebAppApplication          : Starting DongdongWebAppApplication using Java 11.0.11 on gimnamgyuui-MacBookAir.local with PID 24651 (/Users/ngyu/Documents/Develop/Java/study/dongdong_Web_App/build/classes/java/main started by ngyu in /Users/ngyu/Documents/Develop/Java/study/dongdong_Web_App)
+2022-05-03 20:30:49.073  INFO 24651 --- [restartedMain] c.e.d.DongdongWebAppApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-05-03 20:30:49.352  INFO 24651 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-03 20:30:49.355  INFO 24651 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-03 20:30:52.445  INFO 24651 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-03 20:30:52.447  INFO 24651 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-05-03 20:30:52.518  INFO 24651 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dongdong_web_app.application.auth.repository.AuthRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-05-03 20:30:52.521  INFO 24651 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dongdong_web_app.application.hospital.repository.HospitalRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-05-03 20:30:52.523  INFO 24651 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dongdong_web_app.application.location.repository.LocationRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-05-03 20:30:52.528  INFO 24651 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 0 JDBC repository interfaces.
+2022-05-03 20:30:52.547  INFO 24651 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-03 20:30:52.547  INFO 24651 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-03 20:30:52.617  INFO 24651 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 3 JPA repository interfaces.
+2022-05-03 20:30:53.158  INFO 24651 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$bb382927] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-03 20:30:53.275  INFO 24651 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-05-03 20:30:54.007  INFO 24651 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-03 20:30:54.017  INFO 24651 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-03 20:30:54.021  INFO 24651 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-05-03 20:30:54.198  INFO 24651 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-03 20:30:54.198  INFO 24651 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4842 ms
+2022-05-03 20:30:54.400  INFO 24651 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-03 20:30:54.423  INFO 24651 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-05-03 20:30:54.485  INFO 24651 --- [restartedMain] o.h.spatial.integration.SpatialService   : HHH80000001: hibernate-spatial integration enabled : true
+2022-05-03 20:30:54.505  INFO 24651 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-03 20:30:54.551  INFO 24651 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-03 20:30:54.776  INFO 24651 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-03 20:30:54.794  INFO 24651 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2022-05-03 20:30:55.772  INFO 24651 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-03 20:30:55.790  INFO 24651 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-03 20:30:56.210  WARN 24651 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-03 20:30:56.332  INFO 24651 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: fae54631-c393-4e73-8209-c7c552674153
+
+2022-05-03 20:30:56.377  INFO 24651 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-05-03 20:30:56.743  WARN 24651 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-05-03 20:30:57.009  INFO 24651 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-03 20:30:57.055  INFO 24651 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-03 20:30:57.070  INFO 24651 --- [restartedMain] c.e.d.DongdongWebAppApplication          : Started DongdongWebAppApplication in 9.269 seconds (JVM running for 10.464)
+2022-05-03 20:32:29.056  INFO 24905 --- [restartedMain] c.e.d.DongdongWebAppApplication          : Starting DongdongWebAppApplication using Java 11.0.11 on gimnamgyuui-MacBookAir.local with PID 24905 (/Users/ngyu/Documents/Develop/Java/study/dongdong_Web_App/build/classes/java/main started by ngyu in /Users/ngyu/Documents/Develop/Java/study/dongdong_Web_App)
+2022-05-03 20:32:29.057  INFO 24905 --- [restartedMain] c.e.d.DongdongWebAppApplication          : The following 1 profile is active: "dev"
+2022-05-03 20:32:29.115  INFO 24905 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-03 20:32:29.116  INFO 24905 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-03 20:32:30.240  INFO 24905 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-03 20:32:30.242  INFO 24905 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-05-03 20:32:30.285  INFO 24905 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dongdong_web_app.application.auth.repository.AuthRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-05-03 20:32:30.287  INFO 24905 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dongdong_web_app.application.hospital.repository.HospitalRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-05-03 20:32:30.291  INFO 24905 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dongdong_web_app.application.location.repository.LocationRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-05-03 20:32:30.292  INFO 24905 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 0 JDBC repository interfaces.
+2022-05-03 20:32:30.309  INFO 24905 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-03 20:32:30.310  INFO 24905 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-03 20:32:30.341  INFO 24905 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 3 JPA repository interfaces.
+2022-05-03 20:32:30.711  INFO 24905 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$917aaaad] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-03 20:32:30.767  INFO 24905 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-05-03 20:32:31.204  INFO 24905 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-03 20:32:31.215  INFO 24905 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-03 20:32:31.215  INFO 24905 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-05-03 20:32:31.304  INFO 24905 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-03 20:32:31.304  INFO 24905 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2188 ms
+2022-05-03 20:32:31.495  INFO 24905 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-03 20:32:31.539  INFO 24905 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-05-03 20:32:31.604  INFO 24905 --- [restartedMain] o.h.spatial.integration.SpatialService   : HHH80000001: hibernate-spatial integration enabled : true
+2022-05-03 20:32:31.621  INFO 24905 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-03 20:32:31.681  INFO 24905 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-03 20:32:31.836  INFO 24905 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-03 20:32:31.845  INFO 24905 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2022-05-03 20:32:32.527  INFO 24905 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-03 20:32:32.541  INFO 24905 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-03 20:32:33.314  WARN 24905 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-03 20:32:33.459  INFO 24905 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 9c9f9e2d-a492-45b3-b4dc-6bab25c86956
+
+2022-05-03 20:32:33.654  INFO 24905 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-05-03 20:32:34.172  WARN 24905 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-05-03 20:32:34.544  WARN 24905 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-05-03 20:32:34.727  WARN 24905 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2022-05-03 20:32:34.738  INFO 24905 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-03 20:32:34.781  INFO 24905 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-03 20:32:34.846  INFO 24905 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-03 20:32:34.856  INFO 24905 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-05-03 20:32:34.885  INFO 24905 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-05-03 20:32:34.942 ERROR 24905 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2022-05-03 21:50:39.128  INFO 24651 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-03 21:50:39.157  INFO 24651 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-03 21:50:45.168  INFO 24651 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

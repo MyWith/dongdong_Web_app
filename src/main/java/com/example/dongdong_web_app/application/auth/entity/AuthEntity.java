@@ -1,6 +1,9 @@
 package com.example.dongdong_web_app.application.auth.entity;
 
 import lombok.*;
+import org.locationtech.jts.geom.Geometry;
+import org.locationtech.jts.geom.Point;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -27,9 +30,6 @@ public class AuthEntity {
     private String animalName;
     private String animalKind;
     private Date animalAge;
-
-    private double userLat;
-    private double userLon;
 
     private Date createdAt;
     private Date updatedAt;

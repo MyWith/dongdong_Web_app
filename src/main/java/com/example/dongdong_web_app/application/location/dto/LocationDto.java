@@ -3,6 +3,7 @@ package com.example.dongdong_web_app.application.location.dto;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import org.locationtech.jts.geom.Geometry;
 
 public class LocationDto {
 
