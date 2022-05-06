@@ -30,8 +30,9 @@ public class SignInDto {
     @AllArgsConstructor
     @NoArgsConstructor
     public static class Location{
-        private double userLat;
-        private double userLon;
+        private String streetSIDO;
+        private String streetSIGUNGU;
+        private String streetEUPMYENDONG;
     }
 
     @Getter

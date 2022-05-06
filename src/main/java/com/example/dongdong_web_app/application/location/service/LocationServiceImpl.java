@@ -18,19 +18,22 @@ public class LocationServiceImpl implements LocationService{
 
     @Override
     public boolean saveUserLocation(LocationDto.Request locationDto){
-        double lat = (double) locationDto.getUserLat();
-        double lon = (double) locationDto.getUserLon();
+        String sido = "";
+        String sigungu = "";
+        String eupmyendong = "";
         long userUid = (long) locationDto.getUserUid();
 
-        log.info("LAT : " + String.valueOf(lat));
-        log.info("LON : " + String.valueOf(lon));
+        log.info("LAT : " + sido);
+        log.info("LON : " + sigungu);
+        log.info("LON : " + eupmyendong);
         log.info("userUid : " + String.valueOf(userUid));
 
         Optional<AuthEntity> user = locationRepository.findById(String.valueOf(userUid));
 
         user.ifPresent( selectUser ->{
-            selectUser.setUserLat(lat);
-            selectUser.setUserLon(lon);
+            selectUser.setStreetSIDO(sido);
+            selectUser.setStreetSIGUNGU(sigungu);
+            selectUser.setStreetEUPMYENDONG(eupmyendong);
             locationRepository.save(selectUser);
         } );
 

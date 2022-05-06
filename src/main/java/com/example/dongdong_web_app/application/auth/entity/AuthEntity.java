@@ -23,13 +23,19 @@ public class AuthEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long userUid;
 
+    @Column
     private String userEmail;
     private String userPassword;
     private String userNickName;
     private Date userAge;
+
     private String animalName;
     private String animalKind;
     private Date animalAge;
+
+    private String streetSIDO;
+    private String streetSIGUNGU;
+    private String streetEUPMYENDONG;
 
     private Date createdAt;
     private Date updatedAt;

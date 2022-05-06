@@ -32,7 +32,7 @@ public class AuthServiceImpl implements AuthService {
             AuthEntity UserData = authRepository.findByUserEmail(user_email);
             SignInDto.Info info = new SignInDto.Info(UserData.getUserUid(), UserData.getUserNickName(), UserData.getUserAge());
             SignInDto.Animal animal = new SignInDto.Animal(UserData.getAnimalName(), UserData.getAnimalKind());
-            SignInDto.Location location = new SignInDto.Location(UserData.getUserLat(), UserData.getUserLon());
+            SignInDto.Location location = new SignInDto.Location(UserData.getStreetSIDO(), UserData.getStreetSIGUNGU(), UserData.getStreetEUPMYENDONG());
 
             TokenDto token = jwt.createToken( UserData.getUserUid(), info );
 
