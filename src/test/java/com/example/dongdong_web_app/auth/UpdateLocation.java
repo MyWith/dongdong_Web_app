@@ -14,13 +14,4 @@ public class UpdateLocation {
     @Autowired
     AuthRepository authRepository;
 
-    @Test
-    public void 유저위치정보업데이트(){
-        Optional<AuthEntity> user = authRepository.findById("1");
-        user.ifPresent(selectUser -> {
-            selectUser.setUserLat(14.12124123);
-            selectUser.setUserLon(14.12224421);
-            authRepository.save(selectUser);
-        });
-    }
 }
