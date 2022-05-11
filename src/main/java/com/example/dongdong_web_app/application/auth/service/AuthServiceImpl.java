@@ -63,6 +63,10 @@ public class AuthServiceImpl implements AuthService {
                     .userAge(request.getInfo().getUserAge())
                     .animalKind(request.getAnimal().getAnimalKind())
                     .animalName(request.getAnimal().getAnimalName())
+                    .animalAge(request.getAnimal().getAnimalAge())
+                    .streetEUPMYENDONG(request.getLocation().getStreetEUPMYENDONG())
+                    .streetSIDO(request.getLocation().getStreetSIDO())
+                    .streetSIGUNGU(request.getLocation().getStreetSIGUNGU())
                     .build();
 
             authRepository.save(auth);

@@ -22,6 +22,17 @@ public class SignUpDto {
     public static class Animal{
         private String animalName;
         private String animalKind;
+        private Date animalAge;
+    }
+
+    @Getter
+    @Setter
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public static class Location{
+        private String streetSIDO;
+        private String streetSIGUNGU;
+        private String streetEUPMYENDONG;
     }
 
     @Getter
@@ -29,6 +40,7 @@ public class SignUpDto {
     public static class Request{
         private SignUpDto.Info info;
         private SignUpDto.Animal animal;
+        private SignUpDto.Location location;
         private String userEmail;
         private String userPassword;
     }
