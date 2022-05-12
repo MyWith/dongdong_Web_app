@@ -1,5 +1,6 @@
 package com.example.dongdong_web_app.application.auth.entity;
 
+import com.example.dongdong_web_app.common.BaseTimeEntity;
 import lombok.*;
 import org.locationtech.jts.geom.Geometry;
 import org.locationtech.jts.geom.Point;
@@ -17,7 +18,7 @@ import java.util.Date;
 @Table(name = "USER", uniqueConstraints = {
         @UniqueConstraint(columnNames = {"userEmail", "userNickName"})
 })
-public class AuthEntity {
+public class AuthEntity extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,8 +37,5 @@ public class AuthEntity {
     private String streetSIDO;
     private String streetSIGUNGU;
     private String streetEUPMYENDONG;
-
-    private Date createdAt;
-    private Date updatedAt;
 
 }
