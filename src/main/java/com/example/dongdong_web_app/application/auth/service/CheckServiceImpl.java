@@ -10,14 +10,17 @@ import org.springframework.stereotype.Service;
 @Service
 public class CheckServiceImpl implements CheckService {
 
+    private static final String CHECK_PASS_TEXT = "가능";
+    private static final String CHECK_NO_PASS_TEXT = "불가능";
+
     @Autowired
     private CheckRepository checkRepository;
 
     @Override
     public ResponseEntity checkNickName(final String target) {
         if (checkRepository.findByUserNickName(target) == null) {
-            return new ResponseEntity("사용 가능한 닉네임 입니다.", null, HttpStatus.OK);
+            return new ResponseEntity(CHECK_PASS_TEXT, null, HttpStatus.OK);
         }
-        return new ResponseEntity("이미 존재하는 닉네임 입니다.", null, HttpStatus.OK);
+        return new ResponseEntity(CHECK_NO_PASS_TEXT, null, HttpStatus.OK);
     }
 }
