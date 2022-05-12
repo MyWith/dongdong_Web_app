@@ -6,6 +6,8 @@ import com.example.dongdong_web_app.application.auth.dto.TokenDto;
 import com.example.dongdong_web_app.application.auth.repository.AuthRepository;
 import com.example.dongdong_web_app.application.auth.entity.AuthEntity;
 
+import com.example.dongdong_web_app.application.auth.service.interfaces.AuthService;
+import com.example.dongdong_web_app.application.auth.service.interfaces.JwtProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;

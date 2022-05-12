@@ -3,12 +3,14 @@ package com.example.dongdong_web_app.application.auth.service;
 import com.example.dongdong_web_app.application.auth.dto.SignInDto;
 import com.example.dongdong_web_app.application.auth.dto.TokenDto;
 
+import com.example.dongdong_web_app.application.auth.service.interfaces.JwtProvider;
+import com.example.dongdong_web_app.application.auth.service.interfaces.JwtService;
 import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class JwtServiceImpl implements JwtService{
+public class JwtServiceImpl implements JwtService {
 
     @Autowired private JwtProvider jwtProvider;
 

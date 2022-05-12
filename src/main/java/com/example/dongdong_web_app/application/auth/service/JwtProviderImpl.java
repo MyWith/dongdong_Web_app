@@ -4,6 +4,7 @@ import com.example.dongdong_web_app.application.auth.repository.AuthRepository;
 import com.example.dongdong_web_app.application.auth.dto.SignInDto;
 import com.example.dongdong_web_app.application.auth.dto.TokenDto;
 import com.example.dongdong_web_app.application.auth.entity.AuthEntity;
+import com.example.dongdong_web_app.application.auth.service.interfaces.JwtProvider;
 import io.jsonwebtoken.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

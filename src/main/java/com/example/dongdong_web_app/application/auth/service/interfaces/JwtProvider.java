@@ -1,4 +1,4 @@
-package com.example.dongdong_web_app.application.auth.service;
+package com.example.dongdong_web_app.application.auth.service.interfaces;
 
 import com.example.dongdong_web_app.application.auth.dto.SignInDto;
 import com.example.dongdong_web_app.application.auth.dto.TokenDto;
