@@ -16,7 +16,7 @@ public class PostController {
     private PostServiceable postServiceable;
 
     @GetMapping("new-post")
-    public ResponseEntity sendNewPost(@RequestParam int number){
-        return postServiceable.getNewFivePost(number);
+    public ResponseEntity sendNewPost(){
+        return postServiceable.getNewFivePost();
     }
 }

@@ -20,7 +20,7 @@ public class PostServiceImpl implements PostServiceable{
     private PostRepository postRepository;
 
     @Override
-    public ResponseEntity getNewFivePost(int number) {
+    public ResponseEntity getNewFivePost() {
         return new ResponseEntity(postRepository.findFiveNewPosts(), null , HttpStatus.OK);
     }
 }
