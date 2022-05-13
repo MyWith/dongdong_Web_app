@@ -28,8 +28,9 @@ class PostServiceImplTest {
 
         List<PostEntity> posts = query.from(postEntity)
                 .orderBy(postEntity.postId.asc())
+                .limit(5L)
                 .fetch();
 
-        assertThat(posts.get(0).getPostId()).isEqualTo(1);
+        assertThat(posts.size()).isEqualTo(5);
     }
 }

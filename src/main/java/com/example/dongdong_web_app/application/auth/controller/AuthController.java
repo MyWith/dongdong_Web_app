@@ -33,7 +33,6 @@ public class AuthController {
 
     @PostMapping("/autologin")
     public ResponseEntity autoSignIn(@RequestBody TokenDto tokenDto) throws Exception {
-
         SignInDto.Response response = jwtProvider.getUserData(tokenDto);
         return new ResponseEntity(response, null, 200);
     }
