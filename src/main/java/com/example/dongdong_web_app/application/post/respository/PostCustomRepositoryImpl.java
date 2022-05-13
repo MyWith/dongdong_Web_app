@@ -24,7 +24,7 @@ public class PostCustomRepositoryImpl implements PostCustomRepository {
     public List<PostEntity> findFiveNewPosts() {
         return jpaQueryFactory
                 .selectFrom(postEntity)
-                .orderBy(postEntity.created_at.asc())
+                .orderBy(postEntity.created_at.desc())
                 .limit(NEW_POST_LIMIT_COUNT)
                 .fetch();
     }
