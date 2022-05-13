@@ -37,23 +37,10 @@ public class AuthController {
         return new ResponseEntity(response, null, 200);
     }
 
-    @PostMapping("/tokencheck")
-    public ResponseEntity checkToken(@RequestBody TokenDto token) throws Exception {
-        log.info("[POST] TokenData - " + token.getAccessToken());
-        log.info("[POST] TokenData - " + token.getRefreshToken());
-        TokenDto validToken = jwtService.accessTokenCheck(token);
-        return new ResponseEntity(validToken, null, 200);
-    }
 
     @PostMapping("/signup")
     public ResponseEntity signUp(@RequestBody SignUpDto.Request signup){
         log.info("[POST] SignUpData - " + signup);
         return authService.saveUserData(signup);
-    }
-
-    @GetMapping("/exceptionTest")
-    public String exception(@Param("token") String token) throws JSONException {
-        jwtProvider.validationToken(token);
-        return "TEST";
     }
 }
