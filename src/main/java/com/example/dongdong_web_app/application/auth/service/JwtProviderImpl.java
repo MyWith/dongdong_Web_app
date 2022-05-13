@@ -64,12 +64,12 @@ public class JwtProviderImpl implements JwtProvider {
             throw new Exception("Role is not defined");
         }
 
-        AuthEntity auth = authRepository.findByUserUid(Long.valueOf(claims.getSubject()));
+        AuthEntity auth = authRepository.findByUserUid(Long.parseLong(claims.getSubject()));
         SignInDto.Info info = new SignInDto.Info(auth.getUserUid(), auth.getUserNickName(), auth.getUserAge());
         SignInDto.Animal animal = new SignInDto.Animal(auth.getAnimalName(), auth.getAnimalKind());
         TokenDto tokenDto = token;
         if(validationToken(token.getAccessToken())){
-            long userUid = Long.valueOf(claims.getSubject());
+            long userUid = Long.parseLong(claims.getSubject());
             tokenDto = createToken( userUid, info );
         }
 

@@ -1,5 +1,6 @@
 package com.example.dongdong_web_app.application.post.entity;
 
+import com.example.dongdong_web_app.common.BaseTimeEntity;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,7 +13,7 @@ import java.util.Date;
 @Entity
 @Getter
 @Setter
-public class PostEntity {
+public class PostEntity extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,8 +21,7 @@ public class PostEntity {
 
     private long userUid;
     private String postDesc;
-    private Date postCreateDate;
-    private Date postUpdateDate;
+    private String postImage;
 
     private int postComment;
     private int postLike;

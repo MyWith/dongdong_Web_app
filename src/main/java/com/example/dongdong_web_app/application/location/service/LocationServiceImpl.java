@@ -1,5 +1,6 @@
 package com.example.dongdong_web_app.application.location.service;
 
+import com.example.dongdong_web_app.application.auth.dto.SignUpDto;
 import com.example.dongdong_web_app.application.auth.entity.AuthEntity;
 import com.example.dongdong_web_app.application.location.dto.LocationDto;
 import com.example.dongdong_web_app.application.location.repository.LocationRepository;

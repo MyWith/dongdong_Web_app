@@ -13,7 +13,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Data
+@Setter
 @Entity(name = "user")
 @Table(name = "USER", uniqueConstraints = {
         @UniqueConstraint(columnNames = {"userEmail", "userNickName"})
