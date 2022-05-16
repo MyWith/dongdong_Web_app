@@ -18,26 +18,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 public class saveUser {
 
-
     @Autowired
     private MockMvc mockMvc;
 
-    @Test
-    public void 회원가입_테스트_1() throws Exception {
-        JSONObject request = createRequest(
-                "nGyu", 23,
-                "김치", "미니핀",
-                "vpdls1512@gmail.com", "Test1234!!"
-        );
-
-        mockMvc.perform(
-                post("/api/auth/signup")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(request.toString()))
-                .andExpect(status().isOk())
-                .andDo(print());
-
-    }
 
     static JSONObject createRequest(
             String userNickName,
@@ -51,7 +34,7 @@ public class saveUser {
         JSONObject info = new JSONObject();
         JSONObject animal = new JSONObject();
 
-        info.put("userNickName",userNickName)
+        info.put("userNickName", userNickName)
                 .put("userAge", userAge);
 
         animal.put("animalName", animalName)
@@ -60,7 +43,7 @@ public class saveUser {
         request.put("info", info);
         request.put("animal", animal);
         request.put("userEmail", userEmail)
-                .put("userPassword",userPassword);
+                .put("userPassword", userPassword);
 
         return request;
     }
