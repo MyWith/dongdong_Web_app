@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
-public class HospitalServiceImpl implements HospitalService{
+public class HospitalServiceImpl{
 
     @Autowired
     HospitalRepository hospitalRepository;
