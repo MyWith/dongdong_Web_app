@@ -4,7 +4,6 @@ import com.example.dongdong_web_app.application.auth.repository.AuthRepository;
 import com.example.dongdong_web_app.application.auth.dto.SignInDto;
 import com.example.dongdong_web_app.application.auth.dto.TokenDto;
 import com.example.dongdong_web_app.application.auth.entity.AuthEntity;
-import com.example.dongdong_web_app.application.auth.service.interfaces.JwtProvider;
 import io.jsonwebtoken.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +14,7 @@ import java.util.Date;
 
 @Component
 @Slf4j
-public class JwtProviderImpl implements JwtProvider {
+public class JwtProvider {
 
     @Autowired
     AuthRepository authRepository;
@@ -25,10 +24,10 @@ public class JwtProviderImpl implements JwtProvider {
     @Value("${jwt.role}")
     private String Role;
 
+
     private final Long accessTokenExpTime = 60*60*1000L; // 1Hour
     private final Long refreshTokenExpTime = 60*60*1000L; // 1Hour
 
-    @Override
     public TokenDto createToken(Long userid, SignInDto.Info response) {
 
         Claims claims = Jwts.claims().setSubject(String.valueOf(userid));
@@ -56,7 +55,6 @@ public class JwtProviderImpl implements JwtProvider {
                 .build();
     }
 
-    @Override
     public SignInDto.Response getUserData(TokenDto token) throws Exception {
         Claims claims = parseClaims(token.getAccessToken());
 
@@ -81,7 +79,6 @@ public class JwtProviderImpl implements JwtProvider {
                 .build();
     }
 
-    @Override
     public boolean validationToken(String token){
         try {
             Jwts.parser().setSigningKey(secret).parseClaimsJws(token);
@@ -92,7 +89,6 @@ public class JwtProviderImpl implements JwtProvider {
     }
 
 
-    @Override
     public Claims parseClaims(String token){
         try{
             return Jwts.parser()

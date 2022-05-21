@@ -6,15 +6,13 @@ import com.example.dongdong_web_app.application.auth.dto.TokenDto;
 import com.example.dongdong_web_app.application.auth.repository.AuthRepository;
 import com.example.dongdong_web_app.application.auth.entity.AuthEntity;
 
-import com.example.dongdong_web_app.application.auth.service.interfaces.AuthService;
-import com.example.dongdong_web_app.application.auth.service.interfaces.JwtProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
-public class AuthServiceImpl implements AuthService {
+public class AuthService {
 
     @Autowired
     private AuthRepository authRepository;
@@ -26,7 +24,6 @@ public class AuthServiceImpl implements AuthService {
     private JwtProvider jwt;
 
 
-    @Override
     public SignInDto.Response getUserData(String user_email, String user_password) {
         String getPassword = authRepository.findByUserEmail(user_email).getUserPassword();
 
@@ -52,7 +49,6 @@ public class AuthServiceImpl implements AuthService {
         }
     }
 
-    @Override
     public ResponseEntity saveUserData(SignUpDto.Request request) {
         String planText = request.getUserPassword();
         String encodePassword = passwordEncoder.encode(planText);
