@@ -1,13 +1,12 @@
 package com.example.dongdong_web_app.application.post.respository;
 
-import com.example.dongdong_web_app.application.post.entity.PostEntity;
-
-import com.example.dongdong_web_app.application.post.entity.QPostEntity;
+import com.querydsl.core.Tuple;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+import static com.example.dongdong_web_app.application.auth.entity.QAuthEntity.authEntity;
 import static com.example.dongdong_web_app.application.post.entity.QPostEntity.postEntity;
 
 @Repository
@@ -21,9 +20,14 @@ public class PostCustomRepositoryImpl implements PostCustomRepository {
     }
 
     @Override
-    public List<PostEntity> findFiveNewPosts() {
+    public List<Tuple> findFiveNewPosts() {
         return jpaQueryFactory
-                .selectFrom(postEntity)
+                .select(
+                        postEntity,
+                        authEntity
+                )
+                .from(postEntity)
+                .leftJoin(authEntity).on(postEntity.userUid.eq(authEntity.userUid))
                 .orderBy(postEntity.created_at.desc())
                 .limit(NEW_POST_LIMIT_COUNT)
                 .fetch();

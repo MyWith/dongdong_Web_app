@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class PostController {
 
     @Autowired
-    private PostService postServiceable;
+    private PostService postService;
 
     @GetMapping("new-post")
     public ResponseEntity sendNewPost(){
-        return postServiceable.getNewFivePost();
+        return postService.getNewFivePost();
     }
 }
