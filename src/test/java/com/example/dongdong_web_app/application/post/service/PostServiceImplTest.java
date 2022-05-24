@@ -3,7 +3,6 @@ package com.example.dongdong_web_app.application.post.service;
 import com.example.dongdong_web_app.application.post.entity.PostEntity;
 import com.example.dongdong_web_app.application.post.entity.QPostEntity;
 import com.querydsl.jpa.impl.JPAQuery;
-import com.querydsl.jpa.impl.JPAQueryFactory;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -13,7 +12,6 @@ import javax.persistence.PersistenceContext;
 import java.util.List;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class PostServiceImplTest {

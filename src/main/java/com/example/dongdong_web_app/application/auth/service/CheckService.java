@@ -1,10 +1,18 @@
 package com.example.dongdong_web_app.application.auth.service;
 
+import com.example.dongdong_web_app.application.auth.entity.EmailAuth;
+import com.example.dongdong_web_app.application.auth.repository.CheckCustomRepository;
 import com.example.dongdong_web_app.application.auth.repository.CheckRepository;
+import com.example.dongdong_web_app.application.auth.repository.EmailAuthRepository;
+import org.apache.tomcat.jni.Local;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Service
 public class CheckService {

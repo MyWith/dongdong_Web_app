@@ -38,4 +38,7 @@ public class AuthEntity extends BaseTimeEntity {
     private String streetSIGUNGU;
     private String streetEUPMYENDONG;
 
+    public boolean isNotNull(){
+        return userEmail.isEmpty();
+    }
 }
