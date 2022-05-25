@@ -43,11 +43,8 @@ public class EmailTransaction {
     }
 
     private void validEmail(final String email) {
-        try{
-            authRepository.findByUserEmail(email);
+        if (authRepository.existsByUserEmail(email)) {
             throw new RuntimeException();
-        }catch (Exception err){
-            return ;
         }
     }
 }
