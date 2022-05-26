@@ -30,7 +30,7 @@ public class EmailTransaction {
         EmailAuth emailAuth = emailAuthRepository.save(
                 EmailAuth.builder()
                         .email(email)
-                        .authToken(UUID.randomUUID().toString())
+                        .authToken(UUID.randomUUID().toString().substring(0,5))
                         .expireDate(LocalDateTime.now().plusMinutes(5))
                         .expired(false)
                         .build());

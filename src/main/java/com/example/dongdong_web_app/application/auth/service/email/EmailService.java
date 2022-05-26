@@ -54,7 +54,7 @@ public class EmailService {
         props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.smtp.auth", "true");
 
-        String htmlMsg = "<a href=\"http://" + URL + ":8080/api/auth/check/confirm-email?email=" + email + "&authToken=" + authToken + "\">인증하기</a>";
+        String htmlMsg = "인증번호 : " + authToken;
 
         Session session = Session.getDefaultInstance(props);
         MimeMessage message = new MimeMessage(session);
