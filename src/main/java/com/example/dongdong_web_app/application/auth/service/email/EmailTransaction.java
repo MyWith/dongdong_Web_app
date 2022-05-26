@@ -1,19 +1,16 @@
 package com.example.dongdong_web_app.application.auth.service.email;
 
-import com.example.dongdong_web_app.application.auth.entity.AuthEntity;
 import com.example.dongdong_web_app.application.auth.entity.EmailAuth;
 import com.example.dongdong_web_app.application.auth.repository.AuthRepository;
 import com.example.dongdong_web_app.application.auth.repository.EmailAuthRepository;
+import com.example.dongdong_web_app.common.exception.exceptions.ExistEmailException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.time.LocalDateTime;
-import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -44,7 +41,7 @@ public class EmailTransaction {
 
     private void validEmail(final String email) {
         if (authRepository.existsByUserEmail(email)) {
-            throw new RuntimeException();
+            throw new ExistEmailException();
         }
     }
 }
