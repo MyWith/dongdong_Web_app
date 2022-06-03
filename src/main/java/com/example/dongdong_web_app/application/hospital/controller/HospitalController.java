@@ -1,7 +1,9 @@
 package com.example.dongdong_web_app.application.hospital.controller;
 
 import com.example.dongdong_web_app.application.hospital.dto.HospitalDto;
+import com.example.dongdong_web_app.application.hospital.service.HospitalServiceImpl;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,12 +19,15 @@ import java.util.List;
 @Slf4j
 public class HospitalController {
 
+    @Autowired
+    HospitalServiceImpl hospitalService;
+
     @GetMapping("/all")
     public ResponseEntity getAnimalHospitals(@Param("lat") long lat, @Param("lot") long lot){
         log.info("[GET] Hospital");
         log.info("nowUserLat - " + lat);
         log.info("nowUserLot - " + lot);
-        return new ResponseEntity("test",null, HttpStatus.OK);
+        return new ResponseEntity(hospitalService.getAllHospitalAndPharmacy(),null, HttpStatus.OK);
     }
 
 }
