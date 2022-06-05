@@ -23,11 +23,11 @@ public class HospitalController {
     HospitalServiceImpl hospitalService;
 
     @GetMapping("/all")
-    public ResponseEntity getAnimalHospitals(@Param("lat") long lat, @Param("lot") long lot){
+    public ResponseEntity getAnimalHospitals(@Param("lat") double lat, @Param("lot") double lot, @Param("distance") int distance){
         log.info("[GET] Hospital");
         log.info("nowUserLat - " + lat);
         log.info("nowUserLot - " + lot);
-        return new ResponseEntity(hospitalService.getAllHospitalAndPharmacy(),null, HttpStatus.OK);
+        return new ResponseEntity(hospitalService.getAllHospitalAndPharmacy(lot, lat, distance),null, HttpStatus.OK);
     }
 
 }

@@ -13,15 +13,15 @@ import javax.persistence.*;
 public class HospitalEntity {
 
     @Id
-    @GeneratedValue( strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     private String hospitalName;
     private String hospitalAddress;
     private String hospitalTime;
 
-    private long hospitalLat;
-    private long hospitalLot;
+    private double hospitalLat;
+    private double hospitalLot;
 
     private String type;
 }
