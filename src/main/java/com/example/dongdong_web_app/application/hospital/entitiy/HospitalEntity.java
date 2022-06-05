@@ -20,8 +20,8 @@ public class HospitalEntity {
     private String hospitalAddress;
     private String hospitalTime;
 
-    private double hospitalLat;
-    private double hospitalLot;
+    private String hospitalLat;
+    private String hospitalLot;
 
     private String type;
 }

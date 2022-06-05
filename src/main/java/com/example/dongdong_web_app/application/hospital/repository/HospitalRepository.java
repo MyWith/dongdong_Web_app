@@ -12,6 +12,10 @@ import java.util.List;
 public interface HospitalRepository extends JpaRepository<HospitalEntity, String> {
 
     @Query("FROM hospital WHERE ST_Distance_Sphere ( POINT(:lon, :lat), POINT(hospital_lot, hospital_lat) ) <= :distance")
-    List<HospitalEntity> findNearHospital(@Param("lon") final double lon, @Param("lat") final double lat, @Param("distance") final int distance);
+    List<HospitalEntity> findNearHospital(
+            @Param("lon") final double lon,
+            @Param("lat") final double lat,
+            @Param("distance") final int distance
+    );
 
 }
