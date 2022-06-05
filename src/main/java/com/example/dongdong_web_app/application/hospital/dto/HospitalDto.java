@@ -4,29 +4,10 @@ import lombok.*;
 
 public class HospitalDto {
 
-    @Getter
-    @Setter
-    @Builder
-    public static class Location {
-        private double userLat;
-        private double userLot;
+    @Data
+    public class Request{
+        double lat;
+        double lot;
+        int distance;
     }
-
-    public static class Hospital {
-        private Location location;
-        private String type;
-        private String hospitalName;
-        private String hospitalAddress;
-        private String hospitalTime;
-    }
-
-    @Getter
-    @Setter
-    @Builder
-    public static class Response {
-        private double hospitalLat;
-        private double hospitalLot;
-        private String hospitalName;
-    }
-
 }
